@@ -1,0 +1,22 @@
+uuid: 2a17014d-629b-4cbd-8c81-3f08897f8484
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: apartment
+label: Apartment
+type: 'canonical_entities:node'
+pattern: 'apartment/[node:title]'
+selection_criteria:
+  cf59ece2-c702-4c69-90d9-a8f35461e451:
+    id: node_type
+    bundles:
+      apartment: apartment
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cf59ece2-c702-4c69-90d9-a8f35461e451
+selection_logic: and
+weight: -5
+relationships: {  }

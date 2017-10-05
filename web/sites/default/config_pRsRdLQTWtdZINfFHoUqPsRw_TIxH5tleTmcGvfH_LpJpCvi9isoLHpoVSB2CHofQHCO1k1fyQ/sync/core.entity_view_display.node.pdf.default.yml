@@ -1,0 +1,26 @@
+uuid: ac36c376-1b0e-4656-af04-5db990cf1525
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pdf.body
+    - field.field.node.pdf.field_pdf_file
+    - node.type.pdf
+  module:
+    - file
+    - user
+id: node.pdf.default
+targetEntityType: node
+bundle: pdf
+mode: default
+content:
+  field_pdf_file:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden:
+  body: true
+  links: true

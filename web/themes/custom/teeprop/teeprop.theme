@@ -1,0 +1,157 @@
+<?php
+/**
+ * Theme file for Teegarden Properties.
+ */
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Url;
+use Drupal\Core\Routing\UrlGenerator;
+
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function teeprop_preprocess_html(&$vars) {
+  // Add class to body containing node id.
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $vars['attributes']['class'][] = 'page--node--' . $path_args[2];
+  }
+}
+
+/**
+ * Implements template_preprocess_node().
+ */
+function teeprop_preprocess_node(&$vars) {
+  // For apartment nodes, duplicate address field to
+  // create new field to display address as map.
+  if ($vars['node']->getType() == 'apartment' && $vars['view_mode'] == 'full') {
+    $vars['content']['field_address_map'] = $vars['node']->getFields()['field_address']->view();
+    $vars['content']['field_address_map']['#theme'] = 'field__address_map';
+    $vars['content']['field_address_map']['#title'] = 'Map';
+    $vars['content']['field_address_map']['#field_name'] = 'field_address_map';
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function teeprop_preprocess_field(&$vars, $hook) {
+  // For field_address_map.
+  // Piece together address string to feed to Google Maps.
+  if ($hook == 'field__address_map') {
+    $address_str = str_replace(' ', '+', $vars['items'][0]['content']['address_line1']['#value']);
+    $address_str .= '+' . str_replace(' ', '+', $vars['items'][0]['content']['address_line2']['#value']);
+    $address_str .= '+' . str_replace(' ', '+', $vars['items'][0]['content']['locality']['#value']);
+    $address_str .= '+' . str_replace(' ', '+', $vars['items'][0]['content']['administrative_area']['#value']);
+    $address_str .= '+' . str_replace(' ', '+', $vars['items'][0]['content']['postal_code']['#value']);
+    $address_str .= '+' . str_replace(' ', '+', $vars['items'][0]['content']['country_code']['#value']);
+    $vars['items'][0]['content'] = $address_str;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ * @param array $suggestions
+ * @param array $vars
+ */
+function teeprop_theme_suggestions_block_alter(array &$suggestions, array $vars) {
+  // Block suggestions for custom block bundles.
+  if (isset($vars['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $vars['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements template_preprocess_block().
+ * @param $vars
+ */
+function teeprop_preprocess_block(&$vars) {
+  // Hero block: Build image paths for template.
+  if (isset($vars['content']['#block_content']) && $vars['elements']['content']['#block_content']->bundle() == 'hero') {
+    foreach($vars['content']['field_hero_images']['#items']->getValue() as $key => $item) {
+      $file = File::load($item['target_id']);
+      $uri = $file->getFileUri();
+      $vars['content']['image_path_half' . '_' . $key] = ImageStyle::load('hero_half')->buildUrl($uri);
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view().
+ * @param $vars
+ */
+function teeprop_preprocess_views_view(&$vars) {
+  // Apartments view: Remove filter options that don't return results.
+  if ($vars['view']->id() == 'apartments') {
+    $vars['toggle_filters_display'] = TRUE;
+
+    // If this is the initial loading (not AJAX).
+    if ($_REQUEST['_wrapper_format'] != 'drupal_ajax') {
+      // Get filter options.
+      $filter_options = $vars['exposed']['field_bedrooms']['#options'];
+      unset($filter_options['All']);
+
+      // Get terms that have results.
+      $terms_with_results = [];
+      foreach ($vars['rows'][0]['#rows'] as $key => $row) {
+        $tid = $row['#node']->getFields()['field_bedrooms']->getValue()[0]['target_id'];
+        $terms_with_results[] = \Drupal\taxonomy\Entity\Term::load($tid)
+          ->get('name')->value;
+      }
+
+      // Remove filter options without results.
+      foreach ($filter_options as $key => $option) {
+        if (!in_array($option, $terms_with_results)) {
+          unset($vars['exposed']['field_bedrooms']['#options'][$key]);
+        }
+      }
+
+      // Save options into tempstore to use on AJAX call.
+      $tempstore = \Drupal::service('user.shared_tempstore')->get('apartment_view_filters');
+      $tempstore->set('filter_options_bedrooms', $vars['exposed']['field_bedrooms']['#options']);
+
+      // If there is more than one type of result, set var to toggle display of filters.
+      if (count($vars['exposed']['field_bedrooms']['#options']) > 2) {
+        $vars['toggle_filters_display'] = TRUE;
+      }
+      else {
+        $vars['toggle_filters_display'] = FALSE;
+      }
+    }
+    else {
+      // If triggered by AJAX, load options from tempstore.
+      $tempstore = \Drupal::service('user.shared_tempstore')->get('apartment_view_filters');
+      $filter_options = $tempstore->get('filter_options_bedrooms');
+      $vars['exposed']['field_bedrooms']['#options'] = $filter_options;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_TEMPLATE().
+ *
+ * If a link to a PDF node appears in the main menu, link directly to file.
+ */
+function teeprop_preprocess_menu__main(&$vars) {
+
+  foreach($vars['items'] as $key => $menu_link) {
+    if (!empty($menu_link['url']->getRouteParameters())) {
+      $node_id = $menu_link['url']->getRouteParameters()['node'];
+      $node_entity = Node::load($node_id);
+      $node_type = $node_entity->getType();
+
+      if ($node_type == 'pdf') {
+        $file_id = $node_entity->get('field_pdf_file')->getValue()[0]['target_id'];
+        $file = File::load($file_id);
+        $file_url = $file->url();
+        $vars['items'][$key]['url'] = $file_url;
+        $vars['items'][$key]['attributes']->addClass('menu-item--file-link');
+      }
+    }
+  }
+}
+

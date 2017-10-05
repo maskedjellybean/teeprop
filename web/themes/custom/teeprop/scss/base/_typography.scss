@@ -1,0 +1,104 @@
+/**
+ * Typography.
+ */
+
+// Base typography
+
+body,
+html {
+  font-size: 15px;
+  font-family: $font--open-sans;
+  color: $c--dark-gray;
+
+  @include breakpoint($bp--medium) {
+    font-size: 16px;
+  }
+}
+
+p {
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+label {
+  color: $c--dark-green;
+}
+
+// Headers
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+  margin: 1.4rem 0;
+  font-family: $font--bree-serif;
+  color: $c--dark-green;
+}
+
+h1 {
+  font-size: 2rem;
+
+  @include breakpoint($bp--large) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+
+  @include breakpoint($bp--large) {
+    font-size: 2.1rem;
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+
+  @include breakpoint($bp--large) {
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-size: 1.1rem;
+
+  @include breakpoint($bp--large) {
+    font-size: 1.2rem;
+  }
+}
+
+h1, h2, h3, h4 {
+  a {
+    text-decoration: none;
+  }
+}
+
+
+// Text styles
+
+// White text and links
+@mixin text-color--white {
+  color: $c--white;
+
+  a {
+    color: $c--white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $c--light-green;
+    }
+  }
+}
+
+// Large font-size
+@mixin font-size--large {
+  font-size: 1.2rem;
+}
+
+// Small font-size
+@mixin font-size--small {
+  font-size: .85rem;
+}

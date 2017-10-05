@@ -1,0 +1,42 @@
+uuid: 28d35487-d37e-4367-9038-56aeff5f5ed5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.field.block_content.hero.field_hero_images
+    - field.field.block_content.hero.field_hero_overlay_image
+    - field.field.block_content.hero.field_hero_text
+  module:
+    - image
+id: block_content.hero.default
+targetEntityType: block_content
+bundle: hero
+mode: default
+content:
+  field_hero_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: hero_half
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_hero_overlay_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_hero_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 3ec343ef-5e89-4ab8-803e-6463c80902c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pdf
+  module:
+    - text
+id: node.pdf.body
+field_name: body
+entity_type: node
+bundle: pdf
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 9e6032cd-0b7b-4af7-8548-89607688a208
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lease
+    - node.type.apartment
+id: node.apartment.field_lease
+field_name: field_lease
+entity_type: node
+bundle: apartment
+label: Lease
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

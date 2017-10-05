@@ -1,0 +1,19 @@
+uuid: 18c53f66-b3e6-45c3-876e-2a2af85de95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rent
+    - node.type.apartment
+id: node.apartment.field_rent
+field_name: field_rent
+entity_type: node
+bundle: apartment
+label: Rent
+description: 'Describe how much rent is and what is included.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

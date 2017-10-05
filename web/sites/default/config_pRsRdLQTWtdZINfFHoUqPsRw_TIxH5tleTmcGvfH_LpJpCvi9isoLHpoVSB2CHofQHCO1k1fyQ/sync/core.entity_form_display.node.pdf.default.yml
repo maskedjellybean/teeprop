@@ -1,0 +1,52 @@
+uuid: bf6e3f13-f1f5-4f37-ad73-44773a15dcf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pdf.body
+    - field.field.node.pdf.field_pdf_file
+    - node.type.pdf
+  module:
+    - file
+    - path
+    - text
+id: node.pdf.default
+targetEntityType: node
+bundle: pdf
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_pdf_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

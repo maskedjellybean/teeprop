@@ -1,0 +1,38 @@
+<?php
+
+function tee_prop_contact_form_entity_update($entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'apartment') {
+    drupal_flush_all_caches();
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function tee_prop_contact_form_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'contact_form_submit':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Teegarden Properties form submission by @name', array('@name' => $params['name']), $options);
+      $body = <<<'EOD'
+      New form submission from teegardenproperties.com!
+      Name: @name
+      Email: @email
+      Pets: @pet
+      Message: 
+      @message
+EOD;
+      $body_replace = array(
+        '@name' => $params['name'],
+        '@email' => $params['email'],
+        '@pet' => $params['pet'],
+        '@message' => $params['message']
+      );
+      $message['body'][] = t($body, $body_replace, $options);
+      break;
+  }
+}

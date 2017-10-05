@@ -1,0 +1,24 @@
+uuid: 770096df-c3ea-4359-929d-cb94c7556c1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_available
+    - node.type.apartment
+  module:
+    - datetime
+id: node.apartment.field_date_available
+field_name: field_date_available
+entity_type: node
+bundle: apartment
+label: 'Date Available'
+description: 'When with this apartment be available for move in?'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+30'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

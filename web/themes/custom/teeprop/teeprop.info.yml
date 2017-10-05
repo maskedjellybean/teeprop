@@ -1,0 +1,9 @@
+name: Teegarden Properties
+type: theme
+description: This is a Teegarden Properties themed sub theme of Classy
+core: 8.x
+# Defines the base theme
+base theme: classy
+
+libraries:
+  - teeprop/global

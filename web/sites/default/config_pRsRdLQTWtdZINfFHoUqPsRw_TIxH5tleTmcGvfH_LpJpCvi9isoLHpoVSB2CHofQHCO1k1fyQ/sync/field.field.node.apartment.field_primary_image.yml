@@ -1,0 +1,38 @@
+uuid: 6077f2c9-43a1-4e42-8e76-cf72baf06254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_image
+    - node.type.apartment
+  module:
+    - image
+id: node.apartment.field_primary_image
+field_name: field_primary_image
+entity_type: node
+bundle: apartment
+label: 'Primary Image'
+description: 'This will be the image that is used when this apartment appears in a listing of available apartments.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: apartment-images
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

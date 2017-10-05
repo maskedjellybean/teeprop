@@ -1,0 +1,9 @@
+uuid: b822dbc9-0706-4efd-9348-8773bd04ab4e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Apartment - Pets'
+vid: apartment_pets
+description: ''
+hierarchy: 0
+weight: 0

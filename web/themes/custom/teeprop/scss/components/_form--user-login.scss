@@ -1,0 +1,29 @@
+/**
+ * User login form.
+ */
+
+.path-user .layout-content {
+  @include spacing--h;
+  @include spacing--v--xlarge--equal;
+}
+
+.user-login-form {
+  @include spacing--h;
+  @include spacing--v--medium;
+  max-width: $max-width--small;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: $c--white;
+  background-color: $c--medium-green-2;
+  border-radius: $border-radius--small;
+
+  label {
+    color: $c--white;
+  }
+
+  .form-text {
+    width: 100%;
+    border: none;
+  }
+}

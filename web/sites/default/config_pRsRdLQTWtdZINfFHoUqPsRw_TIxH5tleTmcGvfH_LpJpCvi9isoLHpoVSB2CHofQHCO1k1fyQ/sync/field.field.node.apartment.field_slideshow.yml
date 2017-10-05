@@ -1,0 +1,33 @@
+uuid: c511bd20-a7a8-4627-a3fa-d09b3634f07c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slideshow
+    - node.type.apartment
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: node.apartment.field_slideshow
+field_name: field_slideshow
+entity_type: node
+bundle: apartment
+label: Slideshow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      slideshow:
+        enabled: true
+        weight: 3
+      slideshow_slide:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

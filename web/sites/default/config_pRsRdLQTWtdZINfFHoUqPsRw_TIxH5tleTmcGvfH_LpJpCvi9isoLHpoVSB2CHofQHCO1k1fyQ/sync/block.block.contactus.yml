@@ -1,0 +1,31 @@
+uuid: 30a56626-e325-48b0-9374-b7ae55836b1f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f632b975-5fd3-4c9b-b000-b8a67d4e416f'
+  module:
+    - block_content
+    - system
+  theme:
+    - teeprop
+id: contactus
+theme: teeprop
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:f632b975-5fd3-4c9b-b000-b8a67d4e416f'
+settings:
+  id: 'block_content:f632b975-5fd3-4c9b-b000-b8a67d4e416f'
+  label: 'Contact Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,25 @@
+uuid: f5716d8e-574e-4238-85fa-69f4e3c0b0c0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:21326af8-d3f2-4456-b671-d8813097aa8b'
+  module:
+    - block_content
+  theme:
+    - teeprop
+id: policies
+theme: teeprop
+region: footer
+weight: -1
+provider: null
+plugin: 'block_content:21326af8-d3f2-4456-b671-d8813097aa8b'
+settings:
+  id: 'block_content:21326af8-d3f2-4456-b671-d8813097aa8b'
+  label: 'Rental Policies'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

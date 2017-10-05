@@ -1,0 +1,38 @@
+uuid: adcbc5c0-8039-4fcb-be1b-4d5618cc0d6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_image
+    - paragraphs.paragraphs_type.slideshow_slide
+  module:
+    - image
+id: paragraph.slideshow_slide.field_slide_image
+field_name: field_slide_image
+entity_type: paragraph
+bundle: slideshow_slide
+label: 'Slide Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'slideshow-slides/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

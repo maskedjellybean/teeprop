@@ -1,0 +1,86 @@
+/**
+ * Slideshow Paragraph.
+ */
+
+.paragraph--type--slideshow.slideshow.slick-slider {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
+  .slick-arrow {
+    z-index: 50;
+    top: calc(50% - 30px);
+    width: 50px;
+    height: 50px;
+    background: url(../../images/icons/arrows.svg);
+    background-size: 100px;
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: url(../../images/icons/arrows.svg);
+      background-size: 100px;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+
+    &:active {
+      background-position: 0px 50px;
+    }
+  }
+
+  .slick-next {
+    right: 25px;
+    background-position: -50px 0px;
+
+    &:hover,
+    &:focus {
+      background-position: -50px 0px;
+    }
+
+    &:active {
+      background-position: -50px 50px;
+    }
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: auto;
+    top: auto;
+    margin-top: 15px;
+
+    li {
+      width: 20px;
+      height: 20px;
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+      background-color: $c--light-green;
+      transition: background-color .3s ease-in-out;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $c--medium-green;
+      }
+    }
+
+    .slick-active button {
+      background-color: $c--medium-green;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+uuid: 24b48279-667c-413d-9b39-47a63f8e3f7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - tee_prop_contact_form
+  theme:
+    - teeprop
+id: teegardenpropertiescontactform
+theme: teeprop
+region: footer
+weight: -2
+provider: null
+plugin: tee_prop_contact_form_block
+settings:
+  id: tee_prop_contact_form_block
+  label: 'Contact Form'
+  provider: tee_prop_contact_form
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

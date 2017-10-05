@@ -1,0 +1,21 @@
+/**
+ * Footer region.
+ */
+
+.footer {
+  position: relative;
+  padding-bottom: 87px;
+  background-image: url(../../images/main-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 87px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    box-shadow: 0px 12px 17px -11px #000000;
+  }
+}

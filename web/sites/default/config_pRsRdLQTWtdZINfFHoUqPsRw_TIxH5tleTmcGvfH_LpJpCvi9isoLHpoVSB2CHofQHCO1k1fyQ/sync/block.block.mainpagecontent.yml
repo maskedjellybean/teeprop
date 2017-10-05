@@ -1,0 +1,20 @@
+uuid: e4c07355-3ea0-4377-b29e-18395c280faf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - teeprop
+id: mainpagecontent
+theme: teeprop
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

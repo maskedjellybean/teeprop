@@ -1,0 +1,17 @@
+uuid: 5501f63e-be51-42cb-91bd-2bdb61b1afb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Apartment
+type: apartment
+description: 'Create a new Apartment.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

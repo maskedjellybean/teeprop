@@ -1,0 +1,9 @@
+name: Contact Form for Teegarden Properties
+description: Creates a contact form.
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - honeypot:honeypot

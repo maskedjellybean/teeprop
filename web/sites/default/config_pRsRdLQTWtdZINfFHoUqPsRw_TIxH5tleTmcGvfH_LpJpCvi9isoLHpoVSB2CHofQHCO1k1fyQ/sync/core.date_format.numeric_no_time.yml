@@ -1,0 +1,8 @@
+uuid: 051de5c2-fdf8-4b7d-a302-757d4e0b0cf3
+langcode: en
+status: true
+dependencies: {  }
+id: numeric_no_time
+label: 'Numeric, No Time'
+locked: false
+pattern: n/j/Y

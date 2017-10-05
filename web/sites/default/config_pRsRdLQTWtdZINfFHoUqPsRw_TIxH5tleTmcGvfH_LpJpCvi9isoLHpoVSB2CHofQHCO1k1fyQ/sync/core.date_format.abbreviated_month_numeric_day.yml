@@ -1,0 +1,8 @@
+uuid: fa23e90b-ae9c-4f02-b7cd-f7714816871a
+langcode: en
+status: true
+dependencies: {  }
+id: abbreviated_month_numeric_day
+label: 'Abbreviated Month, Numeric Day'
+locked: false
+pattern: 'M jS, Y'

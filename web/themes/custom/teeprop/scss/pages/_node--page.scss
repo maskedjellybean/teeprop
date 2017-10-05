@@ -1,0 +1,19 @@
+/**
+ * Basic Page nodes.
+ */
+
+.node--type--page {
+  @include clearfix;
+  overflow: hidden;
+
+  .node__title {
+    @include spacing--h;
+    text-align: center;
+  }
+
+  .node__content {
+    @include clearfix;
+    @include spacing--h;
+    overflow: hidden;
+  }
+}

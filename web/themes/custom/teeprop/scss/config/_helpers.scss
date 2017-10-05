@@ -1,0 +1,101 @@
+/**
+ * Helper classes or mixins.
+ */
+
+@mixin clearfix {
+  &:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+@mixin spacing--h {
+  padding-left: $spacing--h--small;
+  padding-right: $spacing--h--small;
+
+  @include breakpoint($bp--medium) {
+    padding-left: $spacing--h--medium;
+    padding-right: $spacing--h--medium;
+  }
+}
+
+@mixin spacing--h--neg {
+  margin-left: -#{$spacing--h--small};
+  margin-right: -#{$spacing--h--small};
+
+  @include breakpoint($bp--medium) {
+    margin-left: -#{$spacing--h--medium};
+    margin-right: -#{$spacing--h--medium};
+  }
+}
+
+@mixin spacing--v--xlarge {
+  padding-top: $spacing--v--large;
+  padding-bottom: $spacing--v--large;
+
+  @include breakpoint($bp--medium) {
+    padding-top: $spacing--v--large;
+    padding-bottom: $spacing--v--xlarge;
+  }
+}
+
+@mixin spacing--v--xlarge--equal {
+  padding-top: $spacing--v--large;
+  padding-bottom: $spacing--v--large;
+
+  @include breakpoint($bp--medium) {
+    padding-top: $spacing--v--xlarge;
+    padding-bottom: $spacing--v--xlarge;
+  }
+}
+
+@mixin spacing--v--large {
+  padding-top: $spacing--v--medium;
+  padding-bottom: $spacing--v--medium;
+
+  @include breakpoint($bp--medium) {
+    padding-top: $spacing--v--large;
+    padding-bottom: $spacing--v--large;
+  }
+}
+
+@mixin spacing--v--medium {
+  padding-top: $spacing--v--medium;
+  padding-bottom: $spacing--v--medium;
+
+  @include breakpoint($bp--medium) {
+    padding-top: $spacing--v--medium;
+    padding-bottom: $spacing--v--medium;
+  }
+}
+
+@mixin block-title {
+  @include spacing--h;
+  max-width: $max-width--small;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@mixin border-hover {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    background-color: $c--light-green;
+    transition: height .3s ease-in-out;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    height: 7px;
+  }
+}

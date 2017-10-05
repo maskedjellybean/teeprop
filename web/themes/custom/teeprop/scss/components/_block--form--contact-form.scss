@@ -1,0 +1,75 @@
+/**
+ * Block - Form - Contact Form.
+ */
+
+.block-id--block-teegardenpropertiescontactform {
+  @include spacing--h;
+  @include spacing--v--xlarge;
+  padding-top: 0;
+  background-color: $c--medium-green;
+
+  .block__title {
+    @include block-title;
+    color: $c--white;
+  }
+
+  form,
+  .form__contact-info {
+    @include spacing--h;
+    max-width: $max-width--small;
+    margin: 0 auto;
+    border-radius: 0 0 $border-radius--small $border-radius--small;
+    background-color: $c--medium-green-2;
+  }
+
+  form {
+    @include spacing--v--large;
+  }
+
+  legend,
+  label {
+    color: $c--white;
+  }
+
+  .form__contact-info {
+    @include text-color--white;
+    padding-top: $spacing--v--medium;
+    padding-bottom: 0;
+    font-weight: lighter;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .form-text,
+  .form-email,
+  .form-textarea {
+    width: 100%;
+    border: none;
+  }
+
+  .form-type-checkbox label {
+    display: inline-block;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+  }
+
+  .form-actions {
+    display: block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Desktop
+  @include breakpoint($bp--medium) {
+    width: auto;
+    padding-top: 0;
+
+    .form-actions {
+      display: inline-block;
+    }
+  }
+}

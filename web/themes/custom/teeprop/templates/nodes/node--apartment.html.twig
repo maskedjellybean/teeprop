@@ -1,0 +1,239 @@
+{#
+/**
+ * @file
+ * Theme override to display an Apartment node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type--' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode--' ~ view_mode|clean_class,
+  ]
+%}
+
+{{ attach_library('classy/node') }}
+
+<article {{ attributes.addClass(classes) }}>
+  <section class="apartment-header">
+    <div class="apartment-header__left">
+      {{ content.field_primary_image }}
+    </div>
+    <div class="apartment-header__right">
+      {{ title_prefix }}
+        <h1 {{ title_attributes.addClass('page-title') }}>
+          {{ label }}
+        </h1>
+      {{ title_suffix }}
+
+      <div class="availability-info">
+        {% if node.field_available.getValue().0.value %}
+          <div class="availability-info__available">
+            <div class="available__label">{{ "Available"|t }}: </div>
+            <div class="available__date">{{ content.field_date_available }}</div>
+          </div>
+        {% else %}
+          <div class="availability-info__unavailable">
+            <p>{{ "Sorry, this apartment is not currently available."|t }} </p>
+            <p>{{ "Please see our "|t }} <a href="/#apartments">{{ "available apartments"|t }}</a>
+              {{ " or contact us to be placed on a waiting list."|t }}
+            </p>
+          </div>
+        {% endif %}
+
+        <a href="/#contact" class="button--primary">Contact Us</a>
+        <p class="policy-notice">{{ "Please read our"|t }} <a href="{{ url }}/#policies">{{ "policies"|t }}</a>{{ " before contacting us."|t }}</p>
+      </div>
+
+    </div>
+  </section>
+  <div class="apartment-content">
+    <section class="apartment-content__main">
+      <div {{ content_attributes.addClass('node__content') }}>
+        {{ content.body }}
+      </div>
+      <div class="apartment-content__main__slideshow">
+        {{ content.field_slideshow }}
+      </div>
+    </section>
+    <section class="apartment-content__sidebar">
+      <h2 class="section-title">{{ 'Apartment Info'|t }}</h2>
+      <table class="apartment-info">
+        <tbody>
+          <tr>
+            <th>
+              {{ content.field_rent['#title'] }}
+            </th>
+            <td>
+              {{ content.field_rent }}
+            </td>
+          </tr>
+          {% if content.field_lease.0 %}
+            <tr>
+              <th>
+                {{ content.field_lease['#title'] }}
+              </th>
+              <td>
+                {{ content.field_lease }}
+              </td>
+            </tr>
+          {% endif %}
+          <tr>
+            <th>
+              {{ content.field_bedrooms['#title'] }}
+            </th>
+            <td>
+              {{ content.field_bedrooms }}
+            </td>
+          </tr>
+          {% if content.field_square_feet.0 %}
+          <tr>
+            <th>
+              {{ content.field_square_feet['#title'] }}
+            </th>
+            <td>
+              {{ content.field_square_feet }}
+            </td>
+          </tr>
+          {% endif %}
+          <tr>
+            <th>
+              {{ content.field_address['#title'] }}
+            </th>
+            <td>
+              {{ content.field_address }}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              {{ content.field_location['#title'] }}
+            </th>
+            <td>
+              {{ content.field_location }}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              {{ content.field_utilities['#title'] }}
+            </th>
+            <td>
+              {{ content.field_utilities }}
+            </td>
+          </tr>
+          {% if content.field_pets.0 %}
+            <tr>
+              <th>
+                {{ content.field_pets['#title'] }}
+              </th>
+              <td>
+                {{ content.field_pets }}
+              </td>
+            </tr>
+          {% endif %}
+          {% if content.field_garage.0 %}
+            <tr>
+              <th>
+                {{ content.field_garage['#title'] }}
+              </th>
+              <td>
+                {{ content.field_garage }}
+              </td>
+            </tr>
+          {% endif %}
+          {% if content.field_storage_space.0 %}
+            <tr>
+              <th>
+                {{ content.field_storage_space['#title'] }}
+              </th>
+              <td>
+                {{ content.field_storage_space }}
+              </td>
+            </tr>
+          {% endif %}
+          {% if content.field_room_sizes.0 %}
+            <tr>
+              <th>
+                {{ content.field_room_sizes['#title'] }}
+              </th>
+              <td>
+                {{ content.field_room_sizes }}
+              </td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+
+      {{ content.field_address_map }}
+    </section>
+  </div>
+</article>

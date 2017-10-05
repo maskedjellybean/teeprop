@@ -1,0 +1,24 @@
+uuid: 03fa582f-97ed-4d49-8422-e9ee84ea0e08
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - teeprop
+id: mainnavigation
+theme: teeprop
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

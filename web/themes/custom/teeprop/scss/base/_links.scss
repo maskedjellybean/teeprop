@@ -1,0 +1,76 @@
+/**
+ * Links.
+ */
+
+
+a {
+  color: $c--light-green-2;
+  transition: color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $c--light-green;
+  }
+}
+
+// Buttons
+
+%button--primary,
+a.button--primary {
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  padding: 15px 30px;
+  line-height: 1;
+  background-color: $c--light-green;
+  text-decoration: none;
+  text-align: center;
+  color: $c--white;
+  transition: background-color .3s ease-in-out,
+              color .3s ease-in-out;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 3px;
+    border: 1px solid #b3cc9f;
+    border-radius: 8px;
+    transition: border-color .3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ABC790;
+    // color: $c--light-green;
+    &:after {
+      border-color: #d5e6c5;
+    }
+  }
+
+  // Hack to allow applying styling to direct parent of input element.
+  // Pseudo elements are not applicable to inputs.
+  input {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+}
+
+// Anchors
+
+a[name] {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  margin-top: -#{$h--navbar};
+  padding-top: $h--navbar;
+}

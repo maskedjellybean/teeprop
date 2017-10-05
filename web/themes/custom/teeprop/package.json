@@ -1,0 +1,22 @@
+{
+  "name": "teeprop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss dest/css/style.css; gulp autoprefixer;",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "eyeglass": "^1.1.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0",
+    "singularitygs": "^1.7.0"
+  }
+}

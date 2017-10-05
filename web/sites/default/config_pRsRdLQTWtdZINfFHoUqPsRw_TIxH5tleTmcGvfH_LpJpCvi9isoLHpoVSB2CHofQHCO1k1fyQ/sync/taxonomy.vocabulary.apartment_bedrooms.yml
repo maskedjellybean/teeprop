@@ -1,0 +1,9 @@
+uuid: c75192b4-8fd1-49c5-ab43-462af0afbed7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Apartment - Bedrooms'
+vid: apartment_bedrooms
+description: ''
+hierarchy: 0
+weight: 0

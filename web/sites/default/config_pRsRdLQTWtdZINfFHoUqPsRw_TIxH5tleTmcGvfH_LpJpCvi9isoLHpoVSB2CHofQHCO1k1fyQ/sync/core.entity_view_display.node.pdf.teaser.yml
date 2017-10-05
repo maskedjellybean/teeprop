@@ -1,0 +1,28 @@
+uuid: abf4c363-ca71-47ee-b1dd-ca4465ac7581
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pdf.body
+    - node.type.pdf
+  module:
+    - text
+    - user
+id: node.pdf.teaser
+targetEntityType: node
+bundle: pdf
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 65e9d957-3a37-4e7b-95dd-22c6ca667577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available
+    - node.type.apartment
+id: node.apartment.field_available
+field_name: field_available
+entity_type: node
+bundle: apartment
+label: Available
+description: 'Choose whether this apartment should be listed as available.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

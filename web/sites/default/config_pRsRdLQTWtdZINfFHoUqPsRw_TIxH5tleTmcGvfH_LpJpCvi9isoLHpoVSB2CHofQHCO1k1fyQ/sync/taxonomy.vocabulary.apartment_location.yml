@@ -1,0 +1,9 @@
+uuid: f06c9ce9-ea98-4cbd-866a-9e7da6a12052
+langcode: en
+status: true
+dependencies: {  }
+name: 'Apartment - Location'
+vid: apartment_location
+description: ''
+hierarchy: 0
+weight: 0

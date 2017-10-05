@@ -1,0 +1,30 @@
+uuid: 90a619f4-225c-44ae-98f2-1e710f87dc74
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.apartments
+  module:
+    - system
+    - views
+  theme:
+    - teeprop
+id: views_block__apartments_block_avail
+theme: teeprop
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:apartments-block_avail'
+settings:
+  id: 'views_block:apartments-block_avail'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

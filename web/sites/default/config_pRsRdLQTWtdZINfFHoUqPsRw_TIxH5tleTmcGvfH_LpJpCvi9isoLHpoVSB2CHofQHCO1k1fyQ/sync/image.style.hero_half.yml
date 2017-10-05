@@ -1,0 +1,14 @@
+uuid: 76c5a7f0-0e80-4efc-a843-b2bde5e0a5e4
+langcode: en
+status: true
+dependencies: {  }
+name: hero_half
+label: 'Hero Half (600x585 scale & crop)'
+effects:
+  aafd7959-4dd4-439a-98a0-db457eaac653:
+    uuid: aafd7959-4dd4-439a-98a0-db457eaac653
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 585

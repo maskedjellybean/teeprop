@@ -1,0 +1,19 @@
+uuid: 23c66489-8e59-46fa-aee7-005edd6d6ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_sizes
+    - node.type.apartment
+id: node.apartment.field_room_sizes
+field_name: field_room_sizes
+entity_type: node
+bundle: apartment
+label: 'Room Sizes'
+description: 'Enter sizes of rooms formatted like so: "Living: 15'' x 13''"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

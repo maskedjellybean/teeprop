@@ -1,0 +1,157 @@
+/**
+ * Header/Navbar.
+ */
+
+$application-button--min-width: 215px;
+
+.layout-container {
+  @include breakpoint($bp--medium) {
+    padding-top: 115px;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: $h--navbar;
+  background-color: $c--medium-green;
+  color: $c--tan;
+  box-shadow: 0px 3px 12px -3px #333;
+
+  .header__menu-toggle {
+    position: absolute;
+    right: $spacing--h--small;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../images/icons/menu.svg);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: -1px center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-position: -39px;
+    }
+  }
+
+  // Mobile main menu toggle
+  &.menu-open {
+    .block-menu {
+      display: block;
+    }
+  }
+
+  .block-menu {
+    @include spacing--h;
+    display: none;
+    max-width: $site-max-width;
+    margin: 0 auto;
+    padding-top: $h--navbar;
+  }
+
+  ul.menu {
+    @include spacing--h--neg;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $c--medium-green-2;
+
+    .menu-item {
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      @include spacing--h;
+      padding-top: $spacing--v--small;
+      padding-bottom: $spacing--v--small;
+      color: $c--tan;
+      text-align: center;
+      text-decoration: none;
+      border-bottom: 1px solid $c--medium-green;
+      transition: color, background-color .3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: $c--white;
+        background-color: $c--light-green;
+      }
+    }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($bp--large) {
+
+    .header__menu-toggle {
+      display: none;
+    }
+
+    .block-menu {
+      display: block;
+      padding-top: 0;
+    }
+
+    ul.menu {
+      margin: 0;
+      padding-left: $application-button--min-width;
+      text-align: center;
+      background-color: transparent;
+
+      .menu-item {
+        @include border-hover;
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+      }
+
+      a {
+        padding: 0;
+        line-height: 60px;
+        font-size: 1.1rem;
+        color: $c--tan;
+        border: none;
+
+        &:hover,
+        &:focus {
+          color: $c--tan;
+          background-color: transparent;
+        }
+      }
+
+      // Application PDF button
+      .menu-item.menu-item--file-link {
+        float: right;
+        padding: 7px 0;
+
+        a {
+          min-width: $application-button--min-width;
+          line-height: 1;
+          padding: 13px 60px 13px 26px;
+          color: $c--light-tan;
+          border: 1px solid $c--maroon;;
+          border-radius: 7px;
+          background-image: url(../../images/icons/download.png);
+          background-color: $c--maroon;
+          background-size: 20px;
+          background-repeat: no-repeat;
+          background-position: center right 26px;
+          transition: border-color, background-color .3s ease-in-out;
+
+          &:hover {
+            color: $c--tan;
+            border-color: $c--maroon;
+            background-color: $c--light-maroon;
+          }
+        }
+
+        &:hover:after,
+        &:focus:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

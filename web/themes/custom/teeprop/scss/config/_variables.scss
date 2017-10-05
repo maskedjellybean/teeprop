@@ -1,0 +1,46 @@
+/**
+ * SASS variables.
+ */
+
+// Colors
+$c--white: #FFFFFF;
+$c--black: #000000;
+$c--dark-gray: #333333;
+$c--light-green: #9bb989;
+$c--light-green-2: #85a06d;
+$c--medium-green-2: #6c8469;
+$c--medium-green: #394e40;
+$c--dark-green: #2b3e34;
+$c--light-tan: #f5f0e9;
+$c--tan: #ECE5D9;
+$c--maroon: #421E1E;
+$c--light-maroon: #5a2b2d;
+
+
+// Breakpoints
+$bp--medium: 670px;
+$bp--large: 992px;
+
+// Widths
+$site-max-width: 1200px;
+$max-width--medium: 900px;
+$max-width--small: 680px;
+
+// Heights
+$h--navbar: 60px;
+
+// Spacing
+$spacing--h--small: 15px;
+$spacing--h--medium: 30px;
+
+$spacing--v--small: 15px;
+$spacing--v--medium: 30px;
+$spacing--v--large: 40px;
+$spacing--v--xlarge: 60px;
+
+// Border radius
+$border-radius--small: 8px;
+
+// Fonts
+$font--bree-serif: 'Bree Serif', serif;
+$font--open-sans: 'Open Sans', helvetica, arial, sans-serif;

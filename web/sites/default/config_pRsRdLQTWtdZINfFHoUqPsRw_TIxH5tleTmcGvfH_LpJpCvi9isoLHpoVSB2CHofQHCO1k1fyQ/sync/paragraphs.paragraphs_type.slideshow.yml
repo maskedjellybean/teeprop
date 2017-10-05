@@ -1,0 +1,7 @@
+uuid: 2e0ca7ba-7cb7-4b96-aed5-a49fb6bd5cf0
+langcode: en
+status: true
+dependencies: {  }
+id: slideshow
+label: Slideshow
+behavior_plugins: {  }

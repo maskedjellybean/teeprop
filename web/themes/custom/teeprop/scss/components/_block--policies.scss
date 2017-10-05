@@ -1,0 +1,27 @@
+/**
+ * Block - Policies.
+ */
+
+.block-id--block-policies {
+  @include spacing--h;
+  @include spacing--v--xlarge;
+  background-color: $c--maroon;
+  background-image: url(../../images/red-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: top center;
+
+  .block__title {
+    @include block-title;
+    color: $c--white;
+  }
+
+  .field--name-body {
+    @include spacing--h;
+    max-width: $max-width--small;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: $border-radius--small;
+    background-color: $c--tan;
+  }
+}

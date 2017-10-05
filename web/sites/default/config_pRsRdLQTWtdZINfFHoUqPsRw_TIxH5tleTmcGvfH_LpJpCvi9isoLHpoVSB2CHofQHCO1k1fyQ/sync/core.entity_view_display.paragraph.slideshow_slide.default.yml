@@ -1,0 +1,25 @@
+uuid: e38ee7b1-b510-4ec7-8d4e-b51ea225f5c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_slide.field_slide_image
+    - image.style.slideshow
+    - paragraphs.paragraphs_type.slideshow_slide
+  module:
+    - image
+id: paragraph.slideshow_slide.default
+targetEntityType: paragraph
+bundle: slideshow_slide
+mode: default
+content:
+  field_slide_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: slideshow
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

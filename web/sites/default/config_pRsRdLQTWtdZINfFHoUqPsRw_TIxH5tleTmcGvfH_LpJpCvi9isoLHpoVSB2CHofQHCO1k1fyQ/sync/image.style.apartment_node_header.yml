@@ -1,0 +1,14 @@
+uuid: 6732420d-efdf-4757-8a77-fd59ceb78b12
+langcode: en
+status: true
+dependencies: {  }
+name: apartment_node_header
+label: 'Apartment Node Header (480x360 scale & crop)'
+effects:
+  c73ff9d0-0d04-4313-bd6b-0d8053630144:
+    uuid: c73ff9d0-0d04-4313-bd6b-0d8053630144
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360

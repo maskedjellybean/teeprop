@@ -1,0 +1,99 @@
+/**
+ * Block - View - Available Apartments.
+ */
+
+.block-id--block-views-block-apartments-block-avail {
+  @include spacing--h;
+  @include spacing--v--xlarge;
+  padding-bottom: 0;
+
+  .block__title {
+    @include block-title;
+  }
+
+  .view {
+    max-width: $max-width--small;
+    margin: 0 auto;
+
+    &.view--no-filters {
+      border-top: 2px solid $c--tan;
+    }
+  }
+
+  .view-filters {
+    margin-bottom: 2px;
+    padding: 15px;
+    background-color: $c--tan;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .views-exposed-form {
+    text-align: center;
+  }
+
+  .form-item,
+  .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    float: none;
+    line-height: 40px;
+    margin: 0;
+
+    label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 0;
+      vertical-align: bottom;
+      font-family: $font--bree-serif;
+      font-size: 1.5rem;
+    }
+
+    select {
+      vertical-align: middle;
+      font-size: 1.2rem;
+    }
+  }
+
+  .form-actions {
+    @extend %button--primary;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: $spacing--v--small;
+  }
+
+  .view-empty {
+    margin: 40px 0;
+  }
+
+  .views-row {
+    border-bottom: 2px solid $c--white;
+  }
+
+  // Desktop
+  @include breakpoint($bp--large) {
+    padding-bottom: 0;
+
+    .view-filters {
+      padding: 30px;
+    }
+
+    .views-exposed-form {
+      @include clearfix;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-item {
+      float: left;
+    }
+
+    .form-actions {
+      float: right;
+      clear: none;
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 7b45d3c6-63d2-43cd-8ea2-eff4e5b139d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pets
+    - node.type.apartment
+id: node.apartment.field_pets
+field_name: field_pets
+entity_type: node
+bundle: apartment
+label: Pets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

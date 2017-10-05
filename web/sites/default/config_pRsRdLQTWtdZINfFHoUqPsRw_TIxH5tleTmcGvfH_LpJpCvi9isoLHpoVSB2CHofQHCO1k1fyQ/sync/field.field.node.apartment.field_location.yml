@@ -1,0 +1,32 @@
+uuid: 797ee9ae-8c4d-423c-922e-a562459e7bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.apartment
+    - taxonomy.vocabulary.apartment_location
+  content:
+    - 'taxonomy_term:apartment_location:ccdb5b01-a322-4750-aa15-271055c4669b'
+id: node.apartment.field_location
+field_name: field_location
+entity_type: node
+bundle: apartment
+label: Location
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: ccdb5b01-a322-4750-aa15-271055c4669b
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      apartment_location: apartment_location
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,32 @@
+uuid: 5f35a367-9e62-421c-9b08-42324399c8cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bedrooms
+    - node.type.apartment
+    - taxonomy.vocabulary.apartment_bedrooms
+  content:
+    - 'taxonomy_term:apartment_bedrooms:5ac18f1f-7389-420c-8430-ada519829bd6'
+id: node.apartment.field_bedrooms
+field_name: field_bedrooms
+entity_type: node
+bundle: apartment
+label: Bedrooms
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 5ac18f1f-7389-420c-8430-ada519829bd6
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      apartment_bedrooms: apartment_bedrooms
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

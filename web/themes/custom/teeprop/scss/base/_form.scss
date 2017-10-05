@@ -1,0 +1,122 @@
+/**
+ * Form elements.
+ */
+
+fieldset {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+legend,
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.form-composite > legend, .label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.form-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.form-text,
+.form-email,
+.form-textarea {
+  border-radius: $border-radius--small;
+}
+
+.form-text,
+.form-email {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  color: $c--dark-gray;
+}
+
+.form-textarea {
+  padding: 15px;
+  color: $c--dark-gray;
+}
+
+.form-actions {
+  @extend %button--primary;
+  margin-top: $spacing--v--small;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// DropkickJS selects.
+
+.dk-select {
+  .dk-selected {
+    height: 40px;
+    line-height: 40px;
+    padding-right: 30px;
+    text-align: left;
+  }
+
+  .dk-selected:hover, .dk-selected:focus,
+  &.dk-select-open-down .dk-selected,
+  &.dk-select-open-up .dk-select-options,
+  &.dk-select-open-down .dk-select-options,
+  &.dk-select-multi:focus .dk-select-options {
+    border-color: $c--light-green;
+    text-align: left;
+  }
+
+  .dk-selected:after {
+    margin-right: 30px;
+  }
+
+  .dk-selected:hover:after, .dk-selected:focus:after,
+  &.dk-select-open-up .dk-selected:after,
+  &.dk-select-open-down .dk-selected:after {
+    border-left-color: $c--light-green;
+  }
+
+  .dk-selected:before {
+    border-width: 7px 7px 0;
+    border-top-color: $c--light-green;
+  }
+
+  .dk-selected:hover:before, .dk-selected:focus:before,
+  &.dk-select-open-up .dk-selected:before,
+  &.dk-select-open-down .dk-selected:before {
+    border-top-color: $c--light-green;
+  }
+
+  .dk-select-open-up .dk-selected:before,
+  &.dk-select-open-down .dk-selected:before {
+    border-width: 0 7px 7px;
+    border-bottom-color: $c--light-green;
+  }
+
+  .dk-select-options .dk-option-highlight,
+  .dk-option-selected {
+    background-color: $c--light-green;
+  }
+}

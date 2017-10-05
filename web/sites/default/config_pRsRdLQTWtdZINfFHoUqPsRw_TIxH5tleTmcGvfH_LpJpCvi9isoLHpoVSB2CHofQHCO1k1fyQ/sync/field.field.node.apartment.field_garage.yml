@@ -1,0 +1,19 @@
+uuid: 5948b139-c90b-40db-81a5-c114d4d286af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_garage
+    - node.type.apartment
+id: node.apartment.field_garage
+field_name: field_garage
+entity_type: node
+bundle: apartment
+label: Garage
+description: 'Describe whether a garage is available. You may leave this blank if no garage is available.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

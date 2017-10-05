@@ -1,0 +1,268 @@
+/**
+ * Apartment node.
+ */
+
+
+/**
+ * Full view mode.
+ */
+.node--type--apartment.node--view-mode--full {
+
+  // Header region
+
+  .apartment-header {
+    @include clearfix;
+    background-color: $c--light-tan;
+  }
+
+  .apartment-header__left,
+  .apartment-header__right {
+    @include spacing--h;
+  }
+
+  .apartment-header__right {
+    text-align: center;
+  }
+
+  .field--name-field-primary-image {
+    margin-left: -#{$spacing--h--small};
+    margin-right: -#{$spacing--h--small};
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .availability-info {
+    padding-bottom: $spacing--v--medium;
+  }
+
+  .availability-info__available {
+    height: 45px;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $spacing--v--medium;
+    padding-left: 60px;
+    text-align: left;
+    background-image: url(../../images/icons/available.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .available__label {
+      font-weight: bold;
+    }
+  }
+
+  .policy-notice {
+    @include font-size--small;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  // Content region
+
+  .apartment-content__main {
+    @include spacing--h;
+    padding-top: $spacing--v--large;
+    padding-bottom: $spacing--v--large;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  // Sidebar region
+
+  .apartment-content__sidebar {
+    @include spacing--h;
+
+    .section-title {
+      margin-top: 0;
+    }
+  }
+
+  .apartment-info {
+    width: 100%;
+    background-color: $c--tan;
+
+    th, td {
+      padding: 10px;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: $c--light-tan;
+    }
+  }
+
+  .field--name-field-address-map {
+    margin-top: 60px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  // TABLET
+
+  @include breakpoint($bp--medium) {
+
+    // Header region
+
+    .page-title {
+      margin-top: 0;
+    }
+
+    .apartment-header {
+      @include add-grid(12);
+      @include add-gutter(0);
+      position: relative;
+      margin-bottom: 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 170px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 15px 0 15px;
+        border-color: $c--tan transparent transparent transparent;
+      }
+
+      &__left {
+        @include grid-span(6, 1);
+        padding: 30px;
+        background-color: $c--tan;
+
+      }
+
+      &__right {
+        @include grid-span(6, 7);
+        padding: 30px;
+        text-align: left;
+      }
+    }
+
+    .field--name-field-primary-image {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .availability-info {
+      padding-bottom: 0;
+    }
+
+    .availability-info__available {
+      max-width: none;
+      margin-bottom: $spacing--v--large;
+    }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($bp--large) {
+
+    // Header region
+
+    .apartment-header {
+
+      &__left {
+        @include grid-span(4, 1);
+        padding: 30px;
+
+      }
+
+      &__right {
+        @include grid-span(5, 5);
+        padding: 30px 40px;
+      }
+    }
+
+    // Content region
+
+    .apartment-content {
+      @include add-grid(9);
+      @include add-gutter(0);
+      @include clearfix;
+
+      &__main {
+        @include grid-span(6, 1);
+        margin: 0 0 60px 0;
+        padding: 50px 60px 0 30px;
+      }
+
+      &__sidebar {
+        @include grid-span(3, 7);
+        padding-right: 30px;
+      }
+    }
+
+    // Sidebar region
+
+    .apartment-info {
+      th, td {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+/**
+ * Teaser view mode.
+ */
+
+.node--type--apartment.node--view-mode--teaser {
+  background-color: $c--light-tan;
+  transition: background-color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $c--tan;
+  }
+
+  .node__link-wrapper {
+    @include border-hover;
+    position: relative;
+    display: block;
+    padding: $spacing--h--small $spacing--h--small $spacing--v--medium $spacing--h--small;
+    text-decoration: none;
+  }
+
+  .node__content {
+    @include clearfix;
+  }
+
+  .field--name-body {
+    color: $c--dark-gray;
+  }
+
+  // Desktop
+  @include breakpoint($bp--medium) {
+    .node__link-wrapper {
+      padding: 30px;
+    }
+
+    .content__left {
+      float: left;
+      width: 50%;
+    }
+
+    .content__right {
+      float: left;
+      width: 50%;
+      padding-left: 30px;
+    }
+
+    .node__title {
+      margin-top: 0;
+    }
+  }
+}
