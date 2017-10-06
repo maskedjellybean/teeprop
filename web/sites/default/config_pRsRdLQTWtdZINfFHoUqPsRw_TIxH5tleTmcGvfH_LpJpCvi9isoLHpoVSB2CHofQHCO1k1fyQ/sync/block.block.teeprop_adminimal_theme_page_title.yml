@@ -1,0 +1,20 @@
+uuid: 8ef83af5-e081-4370-bc03-224ee6dfc8b1
+langcode: en
+status: false
+dependencies:
+  theme:
+    - teeprop_adminimal_theme
+_core:
+  default_config_hash: JeYPP3UIT8RQsnz6ZUCUjwdvZ94BRRlfBm71GktsSJM
+id: teeprop_adminimal_theme_page_title
+theme: teeprop_adminimal_theme
+region: ''
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

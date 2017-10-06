@@ -24,9 +24,71 @@ dependencies:
   module:
     - address
     - datetime
+    - field_group
     - image
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_availability:
+      children:
+        - field_available
+        - field_date_available
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Availability
+    group_location_address:
+      children:
+        - field_address
+        - field_location
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Address
+    group_apartment_information:
+      children:
+        - field_bedrooms
+        - field_rent
+        - field_utilities
+        - field_lease
+        - field_garage
+        - field_storage_space
+        - field_pets
+        - field_square_feet
+        - field_room_sizes
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Apartment Information'
+    group_images:
+      children:
+        - field_primary_image
+        - field_slideshow
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Images
 id: node.apartment.default
 targetEntityType: node
 bundle: apartment
@@ -44,30 +106,30 @@ content:
   field_address:
     weight: 4
     settings:
-      default_country: null
+      default_country: US
     third_party_settings: {  }
     type: address_default
     region: content
   field_available:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_bedrooms:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_date_available:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_garage:
-    weight: 10
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -75,7 +137,7 @@ content:
     type: string_textarea
     region: content
   field_lease:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -89,7 +151,7 @@ content:
     type: options_select
     region: content
   field_pets:
-    weight: 12
+    weight: 11
     settings:
       rows: 5
       placeholder: ''
@@ -97,7 +159,7 @@ content:
     type: string_textarea
     region: content
   field_primary_image:
-    weight: 15
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -105,7 +167,7 @@ content:
     type: image_image
     region: content
   field_rent:
-    weight: 7
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -113,7 +175,7 @@ content:
     type: string_textarea
     region: content
   field_room_sizes:
-    weight: 14
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -122,18 +184,18 @@ content:
     region: content
   field_slideshow:
     type: paragraphs
-    weight: 16
+    weight: 6
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
+      title: Slide
+      title_plural: Slides
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: slideshow
     third_party_settings: {  }
     region: content
   field_square_feet:
-    weight: 13
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -141,13 +203,13 @@ content:
     type: string_textfield
     region: content
   field_storage_space:
-    weight: 11
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_utilities:
-    weight: 8
+    weight: 7
     settings:
       size: 60
       placeholder: ''

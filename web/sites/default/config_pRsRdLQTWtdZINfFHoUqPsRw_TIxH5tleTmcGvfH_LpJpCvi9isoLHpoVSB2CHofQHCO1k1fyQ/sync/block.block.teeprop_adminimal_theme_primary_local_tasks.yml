@@ -1,0 +1,22 @@
+uuid: 14d120c4-408d-47a2-a22e-0394b9790eea
+langcode: en
+status: false
+dependencies:
+  theme:
+    - teeprop_adminimal_theme
+_core:
+  default_config_hash: fGckRyHZuoqFJlnCjf15mZJ2QlsdyP_61kOMkyyMwLo
+id: teeprop_adminimal_theme_primary_local_tasks
+theme: teeprop_adminimal_theme
+region: ''
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

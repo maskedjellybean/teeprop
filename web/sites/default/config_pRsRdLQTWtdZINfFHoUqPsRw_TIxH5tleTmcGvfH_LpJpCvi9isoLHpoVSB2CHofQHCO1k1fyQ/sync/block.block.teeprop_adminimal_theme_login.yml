@@ -1,0 +1,22 @@
+uuid: ac073986-dda0-4ecb-91a0-dac81e74a781
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - teeprop_adminimal_theme
+_core:
+  default_config_hash: ph3k7JjRTh7lZUSquVEn_DjXi4igsf_Y_Om9TwUVn7s
+id: teeprop_adminimal_theme_login
+theme: teeprop_adminimal_theme
+region: ''
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }
