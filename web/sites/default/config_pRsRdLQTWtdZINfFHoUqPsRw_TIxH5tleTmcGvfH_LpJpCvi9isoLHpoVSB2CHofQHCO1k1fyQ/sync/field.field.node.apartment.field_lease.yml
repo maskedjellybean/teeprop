@@ -10,7 +10,7 @@ field_name: field_lease
 entity_type: node
 bundle: apartment
 label: Lease
-description: ''
+description: 'Describe the lease terms. This field is optional.'
 required: false
 translatable: false
 default_value: {  }

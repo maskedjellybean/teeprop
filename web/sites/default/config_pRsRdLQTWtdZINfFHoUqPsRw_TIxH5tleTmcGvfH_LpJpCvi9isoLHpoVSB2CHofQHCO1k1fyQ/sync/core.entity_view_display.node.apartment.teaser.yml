@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.apartment.field_bedrooms
     - field.field.node.apartment.field_date_available
     - field.field.node.apartment.field_garage
+    - field.field.node.apartment.field_lease
     - field.field.node.apartment.field_location
     - field.field.node.apartment.field_pets
     - field.field.node.apartment.field_primary_image
     - field.field.node.apartment.field_rent
     - field.field.node.apartment.field_room_sizes
+    - field.field.node.apartment.field_slideshow
     - field.field.node.apartment.field_square_feet
     - field.field.node.apartment.field_storage_space
     - field.field.node.apartment.field_utilities
@@ -36,6 +38,7 @@ content:
     settings:
       trim_length: 130
     third_party_settings: {  }
+    region: content
   field_bedrooms:
     type: entity_reference_label
     weight: 1
@@ -43,6 +46,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+    region: content
   field_primary_image:
     type: image
     weight: 0
@@ -51,15 +55,18 @@ content:
       image_style: apartment_node_header
       image_link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   field_address: true
   field_available: true
   field_date_available: true
   field_garage: true
+  field_lease: true
   field_location: true
   field_pets: true
   field_rent: true
   field_room_sizes: true
+  field_slideshow: true
   field_square_feet: true
   field_storage_space: true
   field_utilities: true

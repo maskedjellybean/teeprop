@@ -10,10 +10,12 @@ field_name: field_pets
 entity_type: node
 bundle: apartment
 label: Pets
-description: ''
+description: 'Describe the pet policy for this apartment. This is an optional field.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 'Small pets allowed (1 pet max) with $50 pet security. Cats or dogs are an additional $10 a month each.'
 default_value_callback: ''
 settings: {  }
 field_type: string_long

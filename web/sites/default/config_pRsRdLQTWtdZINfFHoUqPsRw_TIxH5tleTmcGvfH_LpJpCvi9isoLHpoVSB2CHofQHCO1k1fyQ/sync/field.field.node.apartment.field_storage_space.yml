@@ -13,7 +13,9 @@ label: 'Storage Space'
 description: 'Choose whether this apartment comes with storage space. Choose N/A to not display this information.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 0
 default_value_callback: ''
 settings:
   on_label: 'Yes'

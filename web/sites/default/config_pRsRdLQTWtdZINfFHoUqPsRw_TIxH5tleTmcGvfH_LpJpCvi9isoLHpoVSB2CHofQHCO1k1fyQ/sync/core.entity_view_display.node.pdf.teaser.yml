@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.pdf.body
+    - field.field.node.pdf.field_pdf_file
     - node.type.pdf
   module:
     - text
@@ -25,4 +26,5 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_pdf_file: true

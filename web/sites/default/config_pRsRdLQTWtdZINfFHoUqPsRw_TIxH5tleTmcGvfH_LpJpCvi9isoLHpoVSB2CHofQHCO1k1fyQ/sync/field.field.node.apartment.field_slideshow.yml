@@ -13,7 +13,7 @@ field_name: field_slideshow
 entity_type: node
 bundle: apartment
 label: Slideshow
-description: ''
+description: 'Upload images to create a slideshow. This is an optional field.'
 required: false
 translatable: false
 default_value: {  }

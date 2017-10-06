@@ -13,7 +13,7 @@ entity_type: node
 bundle: apartment
 label: 'Primary Image'
 description: 'This will be the image that is used when this apartment appears in a listing of available apartments.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

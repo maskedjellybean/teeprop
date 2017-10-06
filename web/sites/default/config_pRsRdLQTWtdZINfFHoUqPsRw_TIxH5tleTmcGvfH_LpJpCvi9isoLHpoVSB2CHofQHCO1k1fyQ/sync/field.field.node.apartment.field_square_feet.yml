@@ -10,7 +10,7 @@ field_name: field_square_feet
 entity_type: node
 bundle: apartment
 label: 'Square Feet'
-description: ''
+description: 'Enter how many square feet the apartment is. This is an optional field.'
 required: false
 translatable: false
 default_value: {  }

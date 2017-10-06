@@ -34,7 +34,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 15
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -42,32 +42,32 @@ content:
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 3
+    weight: 4
     settings:
       default_country: null
     third_party_settings: {  }
     type: address_default
     region: content
   field_available:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_bedrooms:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_date_available:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_garage:
-    weight: 9
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -75,7 +75,7 @@ content:
     type: string_textarea
     region: content
   field_lease:
-    weight: 7
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -83,13 +83,13 @@ content:
     type: string_textfield
     region: content
   field_location:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_pets:
-    weight: 13
+    weight: 12
     settings:
       rows: 5
       placeholder: ''
@@ -97,7 +97,7 @@ content:
     type: string_textarea
     region: content
   field_primary_image:
-    weight: 14
+    weight: 15
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -105,7 +105,7 @@ content:
     type: image_image
     region: content
   field_rent:
-    weight: 6
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -113,7 +113,7 @@ content:
     type: string_textarea
     region: content
   field_room_sizes:
-    weight: 12
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -122,7 +122,7 @@ content:
     region: content
   field_slideshow:
     type: paragraphs
-    weight: 26
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -133,7 +133,7 @@ content:
     third_party_settings: {  }
     region: content
   field_square_feet:
-    weight: 11
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -141,7 +141,7 @@ content:
     type: string_textfield
     region: content
   field_storage_space:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
