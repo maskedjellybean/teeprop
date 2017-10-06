@@ -30,7 +30,10 @@ html {
 
 p {
   line-height: 1.6;
-  margin: 1rem 0; }
+  margin: .9rem 0; }
+  @media (min-width: 992px) {
+    p {
+      margin: 1rem 0; } }
 
 label {
   color: #2b3e34; }
@@ -40,9 +43,17 @@ h2,
 h3,
 h4 {
   line-height: 1.4;
-  margin: 1.4rem 0;
+  margin: 1.2rem 0;
   font-family: "Bree Serif", serif;
+  font-weight: 400;
   color: #2b3e34; }
+  @media (min-width: 992px) {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 1.3rem 0;
+      font-weight: 700; } }
 
 h1 {
   font-size: 2rem; }
@@ -57,16 +68,17 @@ h2 {
       font-size: 2.1rem; } }
 
 h3 {
-  font-size: 1.3rem;
-  margin: 1.2rem 0; }
+  font-size: 1.3rem; }
   @media (min-width: 992px) {
     h3 {
       font-size: 1.6rem; } }
 
 h4 {
+  margin: 1rem 0;
   font-size: 1.1rem; }
   @media (min-width: 992px) {
     h4 {
+      margin: 1.1rem 0;
       font-size: 1.2rem; } }
 
 h1 a, h2 a, h3 a, h4 a {
