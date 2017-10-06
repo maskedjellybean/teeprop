@@ -13,7 +13,6 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -25,7 +24,6 @@ module:
   history: 0
   honeypot: 0
   image: 0
-  kint: 0
   link: 0
   menu_ui: 0
   node: 0
