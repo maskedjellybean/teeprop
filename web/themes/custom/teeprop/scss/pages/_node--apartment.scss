@@ -244,6 +244,16 @@
     color: $c--dark-gray;
   }
 
+  .read-more {
+    line-height: 1;
+  }
+
+  .read-more__arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+    vertical-align: bottom;
+  }
+
   // Desktop
   @include breakpoint($bp--medium) {
     .node__link-wrapper {
