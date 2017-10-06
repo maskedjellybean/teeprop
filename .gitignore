@@ -20,5 +20,5 @@ web/themes/custom/teeprop/dest/css/*.css.map
 .idea
 
 # Ignore .htaccess
-web/*/.htaccess
+.htaccess
 !web/.htaccess
