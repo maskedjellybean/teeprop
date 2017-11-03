@@ -6,15 +6,30 @@
 $c--white: #FFFFFF;
 $c--black: #000000;
 $c--dark-gray: #333333;
-$c--light-green: #9bb989;
-$c--light-green-2: #85a06d;
-$c--medium-green-2: #6c8469;
-$c--medium-green: #394e40;
-$c--dark-green: #2b3e34;
-$c--light-tan: #f5f0e9;
-$c--tan: #ECE5D9;
-$c--maroon: #421E1E;
+
+// Maroon theme
+// $c--light-green: #9bb989;
+// $c--light-green-2: #85a06d;
+// $c--medium-green-2: #6c8469;
+// $c--medium-green: #394e40;
+// $c--dark-green: #2b3e34;
+// $c--light-tan: #f5f0e9;
+// $c--tan: #ECE5D9;
+// $c--maroon: #421E1E;
+// $c--light-maroon: #5a2b2d;
+
+
+$c--light-green: #E08150;
+$c--light-green-2: #E08150;
+$c--orange--alt: #f59360;
+$c--medium-green-2: #617A77;
+$c--medium-green: #46564a;
+$c--dark-green: #424242;
+$c--light-tan: #f2f5f7;
+$c--tan: #e0e6e8;
+$c--maroon: #2E464D;
 $c--light-maroon: #5a2b2d;
+
 
 
 // Breakpoints

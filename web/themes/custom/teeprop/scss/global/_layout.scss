@@ -2,67 +2,67 @@
  * Global site layout.
  */
 
-body {
-  background-color: $c--maroon;
-}
+// body {
+//   background-color: $c--maroon;
+// }
 
-// Background images - Anonymous user.
-// Background positioning when there is no admin toolbar.
+// // Background images - Anonymous user.
+// // Background positioning when there is no admin toolbar.
 
-.bg-wrapper {
-  background-image: url(../../images/red-bg.jpg);
-  background-repeat: repeat-x;
-  background-position: center -99px;
-}
+// .bg-wrapper {
+//   background-image: url(../../images/red-bg.jpg);
+//   background-repeat: repeat-x;
+//   background-position: center -99px;
+// }
 
-.bg-wrapper-2 {
-  background-image: url(../../images/red-bgV2.jpg);
-  background-repeat: repeat-x;
-  background-position: center 320px;
-}
+// .bg-wrapper-2 {
+//   background-image: url(../../images/red-bgV2.jpg);
+//   background-repeat: repeat-x;
+//   background-position: center 320px;
+// }
 
-.bg-wrapper-3 {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ece6da+0,ffffff+56 */
-  background-color: #ece6da; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ece6da 0%, #ffffff 56%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #ece6da 0%, #ffffff 56%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ece6da 0%, #ffffff 56%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ece6da', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-  background-position-y: 490px;
-  background-repeat-y: no-repeat;
+// .bg-wrapper-3 {
+//   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ece6da+0,ffffff+56 */
+//   background-color: #ece6da; /* Old browsers */
+//   background: -moz-linear-gradient(top,  #ece6da 0%, #ffffff 56%); /* FF3.6-15 */
+//   background: -webkit-linear-gradient(top,  #ece6da 0%, #ffffff 56%); /* Chrome10-25,Safari5.1-6 */
+//   background: linear-gradient(to bottom, #ece6da 0%, #ffffff 56%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ece6da', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+//   background-position-y: 490px;
+//   background-repeat-y: no-repeat;
 
-  &:after {
-    position: absolute;
-    top: 174px;
-    left: 0;
-    right: 0;
-    content: '';
-    height: 60px;
-    background-color: $c--medium-green-2;
-  }
-}
+//   &:after {
+//     position: absolute;
+//     top: 174px;
+//     left: 0;
+//     right: 0;
+//     content: '';
+//     height: 60px;
+//     background-color: $c--medium-green-2;
+//   }
+// }
 
-// Background images - Logged in and admin bar at top.
+// // Background images - Logged in and admin bar at top.
 
-.toolbar-horizontal {
-  .bg-wrapper-3:after {
-    top: 214px;
-  }
+// .toolbar-horizontal {
+//   .bg-wrapper-3:after {
+//     top: 214px;
+//   }
 
-  &.toolbar-tray-open {
-    .bg-wrapper-3:after {
-      top: 254px;
-    }
-  }
-}
+//   &.toolbar-tray-open {
+//     .bg-wrapper-3:after {
+//       top: 254px;
+//     }
+//   }
+// }
 
-// Background images - Logged in and admin bar at side.
+// // Background images - Logged in and admin bar at side.
 
-.toolbar-vertical {
-  .bg-wrapper-3:after {
-    top: 214px;
-  }
-}
+// .toolbar-vertical {
+//   .bg-wrapper-3:after {
+//     top: 214px;
+//   }
+// }
 
 .main-content {
   @include clearfix;
@@ -83,5 +83,35 @@ body {
     padding-bottom: $spacing--v--xlarge;
   }
 }
+
+
+
+// NEW COLORS
+
+
+body {
+  background-color: #2E464D;
+}
+
+.bg-wrapper {
+  // background-color: #A2A48D;
+  background-size: 450px;
+  background: linear-gradient(to bottom, #DBE0CD 0%, #ffffff 56%);
+  background-position-y: 490px;
+  background-repeat-y: no-repeat;
+}
+
+.bg-wrapper-3 {
+  &:after {
+    position: absolute;
+    top: 174px;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 60px;
+    background-color: $c--medium-green-2;
+  }
+}
+
 
 

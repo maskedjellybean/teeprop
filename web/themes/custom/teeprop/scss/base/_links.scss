@@ -33,27 +33,27 @@ a.button--primary {
   border: none;
   cursor: pointer;
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: 3px;
-    border: 1px solid #b3cc9f;
-    border-radius: 8px;
-    transition: border-color .3s ease-in-out;
-    pointer-events: none;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   margin: 3px;
+  //   border: 1px solid #b3cc9f;
+  //   border-radius: 8px;
+  //   transition: border-color .3s ease-in-out;
+  //   pointer-events: none;
+  // }
 
   &:hover,
   &:focus {
-    background-color: #ABC790;
+    background-color: $c--orange--alt;
     // color: $c--light-green;
-    &:after {
-      border-color: #d5e6c5;
-    }
+    // &:after {
+    //   border-color: #d5e6c5;
+    // }
   }
 
   // Hack to allow applying styling to direct parent of input element.
