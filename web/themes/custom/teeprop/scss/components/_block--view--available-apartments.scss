@@ -72,6 +72,11 @@
     border-bottom: 2px solid $c--white;
   }
 
+  .view-footer {
+    margin-top: $spacing--v--medium;
+    text-align: center;
+  }
+
   // Desktop
   @include breakpoint($bp--large) {
     padding-bottom: 0;

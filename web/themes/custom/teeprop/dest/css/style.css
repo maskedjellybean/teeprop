@@ -92,7 +92,7 @@ a {
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out; }
   a:hover, a:focus {
-    color: #E08150; }
+    color: #f59360; }
 
 .form-actions, .block-id--block-views-block-apartments-block-avail .form-actions,
 a.button--primary {
@@ -319,7 +319,7 @@ label {
           right: 0;
           height: 0;
           width: 100%;
-          background-color: #E08150;
+          background-color: #f59360;
           -webkit-transition: height .3s ease-in-out;
           transition: height .3s ease-in-out; }
         .header ul.menu .menu-item:hover:after, .header ul.menu .menu-item:focus:after {
@@ -613,6 +613,9 @@ body {
     margin: 40px 0; }
   .block-id--block-views-block-apartments-block-avail .views-row {
     border-bottom: 2px solid #FFFFFF; }
+  .block-id--block-views-block-apartments-block-avail .view-footer {
+    margin-top: 30px;
+    text-align: center; }
   @media (min-width: 992px) {
     .block-id--block-views-block-apartments-block-avail {
       padding-bottom: 0; }
@@ -986,6 +989,19 @@ body {
     width: 33%; } }
 
 /**
+ * Read More link.
+ */
+.read-more {
+  line-height: 1;
+  text-decoration: none; }
+
+.read-more__arrow {
+  margin-left: 5px;
+  font-size: 1.5rem;
+  line-height: 1;
+  vertical-align: bottom; }
+
+/**
  * Basic Page nodes.
  */
 .node--type--page {
@@ -1052,7 +1068,7 @@ body {
       right: 0;
       height: 0;
       width: 100%;
-      background-color: #E08150;
+      background-color: #f59360;
       -webkit-transition: height .3s ease-in-out;
       transition: height .3s ease-in-out; }
     .node--type--apartment.node--view-mode--teaser .node__link-wrapper:hover:after, .node--type--apartment.node--view-mode--teaser .node__link-wrapper:focus:after {
@@ -1066,12 +1082,6 @@ body {
     clear: both; }
   .node--type--apartment.node--view-mode--teaser .field--name-body {
     color: #333333; }
-  .node--type--apartment.node--view-mode--teaser .read-more {
-    line-height: 1; }
-  .node--type--apartment.node--view-mode--teaser .read-more__arrow {
-    font-size: 1.5rem;
-    line-height: 1;
-    vertical-align: bottom; }
   @media (min-width: 670px) {
     .node--type--apartment.node--view-mode--teaser .node__link-wrapper {
       padding: 30px; }
