@@ -1,0 +1,61 @@
+/**
+ * Apartment node - Teaser view mode.
+ */
+
+.node--type--apartment.node--view-mode--teaser {
+  background-color: $c--light-tan;
+  transition: background-color .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $c--tan;
+  }
+
+  .node__link-wrapper {
+    @include border-hover;
+    position: relative;
+    display: block;
+    padding: $spacing--h--small $spacing--h--small $spacing--v--medium $spacing--h--small;
+    text-decoration: none;
+  }
+
+  .node__content {
+    @include clearfix;
+  }
+
+  .field--name-body {
+    color: $c--dark-gray;
+  }
+
+  .read-more {
+    line-height: 1;
+  }
+
+  .read-more__arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+    vertical-align: bottom;
+  }
+
+  // Desktop
+  @include breakpoint($bp--medium) {
+    .node__link-wrapper {
+      padding: 30px;
+    }
+
+    .content__left {
+      float: left;
+      width: 50%;
+    }
+
+    .content__right {
+      float: left;
+      width: 50%;
+      padding-left: 30px;
+    }
+
+    .node__title {
+      margin-top: 0;
+    }
+  }
+}

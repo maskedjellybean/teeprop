@@ -27,7 +27,9 @@
 
 // Content types
 @import "pages/_node--page.scss";
-@import "pages/_node--apartment.scss";
+@import "components/_node--property--teaser.scss";
+@import "components/_node--apartment--teaser.scss";
+@import "components/_node--apartment--full.scss";
 
 // Specific pages
 @import "pages/_page--home.scss";

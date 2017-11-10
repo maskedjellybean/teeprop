@@ -18,15 +18,29 @@
 }
 
 .view--all-apartments {
-  .view-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  .views-row {
+    margin-bottom: $spacing--v--medium;
   }
 
-  .views-row {
-    width: 33%;
-    margin-bottom: $spacing--v--medium;
-    padding: 0 $spacing--h--small;
+  // Tablet
+  @include breakpoint($bp--medium) {
+    .view-content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .views-row {
+      width: 50%;
+      margin-bottom: $spacing--v--medium;
+      padding: 0 $spacing--h--small;
+    }
+  }
+
+  // Desktop
+  @include breakpoint($bp--large) {
+    .views-row {
+      width: 33%;
+    }
   }
 }

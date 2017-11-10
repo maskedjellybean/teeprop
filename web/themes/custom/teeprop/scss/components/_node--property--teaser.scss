@@ -1,0 +1,16 @@
+/**
+ * Property node - Teaser view mode.
+ */
+
+.node--type--property.node--view-mode--teaser {
+  text-align: center;
+
+  .field--name-field-primary-image img {
+    margin: 0 auto;
+  }
+
+  // Desktop
+  @include breakpoint($bp--medium) {
+
+  }
+}
