@@ -1,0 +1,44 @@
+uuid: 2740f53f-0bf1-491d-a8d4-08a805544f4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.property.body
+    - field.field.node.property.field_location
+    - field.field.node.property.field_primary_image
+    - image.style.apartment_node_header
+    - node.type.property
+  module:
+    - image
+    - text
+    - user
+id: node.property.teaser
+targetEntityType: node
+bundle: property
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_primary_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: apartment_node_header
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_location: true

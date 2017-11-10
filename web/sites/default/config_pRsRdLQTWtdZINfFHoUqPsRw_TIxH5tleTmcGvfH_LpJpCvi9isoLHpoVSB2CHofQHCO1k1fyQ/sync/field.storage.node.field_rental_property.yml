@@ -1,0 +1,19 @@
+uuid: 14ee4503-a8ad-4f96-8382-a0325cb2c3ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_rental_property
+field_name: field_rental_property
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

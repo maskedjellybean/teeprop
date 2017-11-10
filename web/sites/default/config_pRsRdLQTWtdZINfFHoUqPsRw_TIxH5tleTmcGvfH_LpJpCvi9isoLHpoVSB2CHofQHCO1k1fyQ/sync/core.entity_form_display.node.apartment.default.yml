@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.apartment.field_pets
     - field.field.node.apartment.field_primary_image
     - field.field.node.apartment.field_rent
+    - field.field.node.apartment.field_rental_property
     - field.field.node.apartment.field_room_sizes
     - field.field.node.apartment.field_slideshow
     - field.field.node.apartment.field_square_feet
@@ -35,7 +36,7 @@ third_party_settings:
         - field_available
         - field_date_available
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         id: ''
@@ -48,7 +49,7 @@ third_party_settings:
         - field_address
         - field_location
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       format_settings:
         id: ''
@@ -68,7 +69,7 @@ third_party_settings:
         - field_square_feet
         - field_room_sizes
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       format_settings:
         id: ''
@@ -96,7 +97,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -173,6 +174,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_rental_property:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_room_sizes:
     weight: 13

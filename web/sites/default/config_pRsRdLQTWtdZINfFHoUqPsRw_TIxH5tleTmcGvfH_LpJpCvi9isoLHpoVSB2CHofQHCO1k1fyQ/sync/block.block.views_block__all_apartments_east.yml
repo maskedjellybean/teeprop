@@ -1,0 +1,30 @@
+uuid: 04a72fb0-fc87-4a09-a117-ae9a4b210bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_apartments
+  module:
+    - system
+    - views
+  theme:
+    - teeprop
+id: views_block__all_apartments_east
+theme: teeprop
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:all_apartments-east'
+settings:
+  id: 'views_block:all_apartments-east'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /rental-properties
+    negate: false
+    context_mapping: {  }

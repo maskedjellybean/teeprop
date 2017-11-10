@@ -1,0 +1,38 @@
+uuid: 2b00f867-b044-4cbe-a414-7073c899cdaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_image
+    - node.type.property
+  module:
+    - image
+id: node.property.field_primary_image
+field_name: field_primary_image
+entity_type: node
+bundle: property
+label: 'Primary Image'
+description: 'This is the image displayed for this property on the <a href="/rental-properties">Rental Properties</a> page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: property-images
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

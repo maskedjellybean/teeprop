@@ -1,0 +1,18 @@
+uuid: d44f145a-89b2-4e01-9bb1-b7c614da6f1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.property
+id: node.property.title
+field_name: title
+entity_type: node
+bundle: property
+label: Address
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

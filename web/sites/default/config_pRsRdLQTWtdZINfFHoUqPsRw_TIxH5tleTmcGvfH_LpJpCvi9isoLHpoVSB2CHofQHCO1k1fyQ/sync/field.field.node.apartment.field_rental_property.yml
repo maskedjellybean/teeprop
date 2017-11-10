@@ -1,0 +1,28 @@
+uuid: 56dd5a98-9e99-439a-b90b-c36bf24f315e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rental_property
+    - node.type.apartment
+    - node.type.property
+id: node.apartment.field_rental_property
+field_name: field_rental_property
+entity_type: node
+bundle: apartment
+label: 'Rental Property'
+description: 'Select which property this apartment is a part of.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      property: property
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
