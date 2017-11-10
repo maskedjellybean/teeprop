@@ -23,6 +23,7 @@
 @import "components/_paragraph--slideshow.scss";
 @import "components/_block--policies.scss";
 @import "components/_form--user-login.scss";
+@import "components/_block--view--rental-properties.scss";
 
 // Content types
 @import "pages/_node--page.scss";
@@ -31,4 +32,5 @@
 // Specific pages
 @import "pages/_page--home.scss";
 @import "pages/_page--photos.scss";
+@import "pages/_page--rental-properties.scss";
 

@@ -1,0 +1,32 @@
+/**
+ * Block - View - Rental Properties.
+ */
+
+.block-id--block-views-block-all-apartments-west,
+.block-id--block-views-block-all-apartments-east {
+  @include spacing--v--medium;
+
+  .block__title {
+    @include block-title;
+  }
+
+  .block__content {
+    @include spacing--h;
+    max-width: $max-width--medium;
+    margin: 0 auto;
+  }
+}
+
+.view--all-apartments {
+  .view-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .views-row {
+    width: 33%;
+    margin-bottom: $spacing--v--medium;
+    padding: 0 $spacing--h--small;
+  }
+}

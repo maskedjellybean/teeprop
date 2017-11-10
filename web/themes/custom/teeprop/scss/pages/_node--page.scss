@@ -8,6 +8,7 @@
 
   .node__title {
     @include spacing--h;
+    margin-top: $spacing--v--large;
     text-align: center;
   }
 

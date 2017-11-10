@@ -926,6 +926,59 @@ body {
     border: none; }
 
 /**
+ * Block - View - Rental Properties.
+ */
+.block-id--block-views-block-all-apartments-west,
+.block-id--block-views-block-all-apartments-east {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  @media (min-width: 670px) {
+    .block-id--block-views-block-all-apartments-west,
+    .block-id--block-views-block-all-apartments-east {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+  .block-id--block-views-block-all-apartments-west .block__title,
+  .block-id--block-views-block-all-apartments-east .block__title {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 680px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    @media (min-width: 670px) {
+      .block-id--block-views-block-all-apartments-west .block__title,
+      .block-id--block-views-block-all-apartments-east .block__title {
+        padding-left: 30px;
+        padding-right: 30px; } }
+  .block-id--block-views-block-all-apartments-west .block__content,
+  .block-id--block-views-block-all-apartments-east .block__content {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 900px;
+    margin: 0 auto; }
+    @media (min-width: 670px) {
+      .block-id--block-views-block-all-apartments-west .block__content,
+      .block-id--block-views-block-all-apartments-east .block__content {
+        padding-left: 30px;
+        padding-right: 30px; } }
+
+.view--all-apartments .view-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.view--all-apartments .views-row {
+  width: 33%;
+  margin-bottom: 30px;
+  padding: 0 15px; }
+
+/**
  * Basic Page nodes.
  */
 .node--type--page {
@@ -940,6 +993,7 @@ body {
   .node--type--page .node__title {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 40px;
     text-align: center; }
     @media (min-width: 670px) {
       .node--type--page .node__title {
@@ -1215,6 +1269,15 @@ body {
  * Photos page.
  */
 .page--node--14 .main-content .field--name-body {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+/**
+ * All Rental Properties page.
+ */
+.page--node--18 .main-content .field--name-body {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
