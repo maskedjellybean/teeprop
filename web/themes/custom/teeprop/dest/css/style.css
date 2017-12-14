@@ -421,14 +421,32 @@ body {
   background-position-y: 490px;
   background-repeat-y: no-repeat; }
 
-.bg-wrapper-3:after {
-  position: absolute;
-  top: 174px;
-  left: 0;
-  right: 0;
-  content: '';
-  height: 60px;
-  background-color: #617A77; }
+.bg-wrapper-2 {
+  background-image: url(../../images/blue-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: center -99px; }
+
+.bg-wrapper-3 {
+  background-image: url(../../images/blue-bg--flipped.jpg);
+  background-repeat: repeat-x;
+  background-position: center 290px; }
+  .bg-wrapper-3:after {
+    position: absolute;
+    top: 174px;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 60px;
+    background-color: #617A77; }
+
+.toolbar-horizontal .bg-wrapper-3:after {
+  top: 214px; }
+
+.toolbar-horizontal.toolbar-tray-open .bg-wrapper-3:after {
+  top: 254px; }
+
+.toolbar-vertical .bg-wrapper-3:after {
+  top: 214px; }
 
 /**
  * Hero block.
@@ -849,7 +867,7 @@ body {
   padding-bottom: 40px;
   background-color: #2E464D;
   background-repeat: repeat-x;
-  background-position: top center; }
+  background-position: center -99px; }
   @media (min-width: 670px) {
     .block-id--block-policies {
       padding-left: 30px;

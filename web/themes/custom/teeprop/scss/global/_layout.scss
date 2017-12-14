@@ -101,7 +101,18 @@ body {
   background-repeat-y: no-repeat;
 }
 
+.bg-wrapper-2 {
+  background-image: url(../../images/blue-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: center -99px;
+}
+
 .bg-wrapper-3 {
+  background-image: url(../../images/blue-bg--flipped.jpg);
+  background-repeat: repeat-x;
+  background-position: center 290px;
+
+
   &:after {
     position: absolute;
     top: 174px;
@@ -110,6 +121,28 @@ body {
     content: '';
     height: 60px;
     background-color: $c--medium-green-2;
+  }
+}
+
+// Background images - Logged in and admin bar at top.
+
+.toolbar-horizontal {
+  .bg-wrapper-3:after {
+    top: 214px;
+  }
+
+  &.toolbar-tray-open {
+    .bg-wrapper-3:after {
+      top: 254px;
+    }
+  }
+}
+
+// Background images - Logged in and admin bar at side.
+
+.toolbar-vertical {
+  .bg-wrapper-3:after {
+    top: 214px;
   }
 }
 

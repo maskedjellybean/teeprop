@@ -6,9 +6,9 @@
   @include spacing--h;
   @include spacing--v--xlarge;
   background-color: $c--maroon;
-  // background-image: url(../../images/red-bg.jpg);
+  // background-image: url(../../images/blue-bg.jpg);
   background-repeat: repeat-x;
-  background-position: top center;
+  background-position: center -99px;
 
   .block__title {
     @include block-title;
