@@ -1,0 +1,18 @@
+uuid: 7c7980a6-1438-4570-a2a6-ba85a415c6ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.apartment
+id: node.apartment.title
+field_name: title
+entity_type: node
+bundle: apartment
+label: Title/Address
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
