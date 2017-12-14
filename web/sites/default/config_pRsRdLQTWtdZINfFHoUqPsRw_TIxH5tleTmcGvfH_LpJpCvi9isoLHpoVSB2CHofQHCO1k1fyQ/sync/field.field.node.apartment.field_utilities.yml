@@ -9,8 +9,8 @@ id: node.apartment.field_utilities
 field_name: field_utilities
 entity_type: node
 bundle: apartment
-label: Utilities
-description: 'Describe how/if utilities are paid.'
+label: 'Average Utilities'
+description: 'Describe how/if utilities are paid and their average cost.'
 required: true
 translatable: false
 default_value: {  }

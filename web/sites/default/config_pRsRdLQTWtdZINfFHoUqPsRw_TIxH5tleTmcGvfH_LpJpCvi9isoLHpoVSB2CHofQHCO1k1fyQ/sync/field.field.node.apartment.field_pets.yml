@@ -10,7 +10,7 @@ field_name: field_pets
 entity_type: node
 bundle: apartment
 label: Pets
-description: 'Describe the pet policy for this apartment. This is an optional field.'
+description: 'Describe the pet policy for this apartment. This is an optional field. You may change or delete the default text if you like.'
 required: false
 translatable: false
 default_value:

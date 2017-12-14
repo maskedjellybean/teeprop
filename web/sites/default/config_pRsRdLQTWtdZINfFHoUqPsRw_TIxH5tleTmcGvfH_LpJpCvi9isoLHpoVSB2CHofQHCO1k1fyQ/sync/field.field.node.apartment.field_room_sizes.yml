@@ -10,7 +10,7 @@ field_name: field_room_sizes
 entity_type: node
 bundle: apartment
 label: 'Room Sizes'
-description: 'Enter sizes of rooms formatted like so: "Living: 15'' x 13''"'
+description: 'Enter the sizes of rooms formatted like so: "Living: 15'' x 13''".  This is an optional field.'
 required: false
 translatable: false
 default_value: {  }

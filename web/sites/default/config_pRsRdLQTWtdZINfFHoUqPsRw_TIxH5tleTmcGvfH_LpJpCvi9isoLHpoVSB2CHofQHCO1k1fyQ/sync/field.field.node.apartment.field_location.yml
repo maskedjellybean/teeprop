@@ -13,7 +13,7 @@ field_name: field_location
 entity_type: node
 bundle: apartment
 label: Location
-description: ''
+description: 'Choose which side of Green Bay this apartment is on.'
 required: true
 translatable: false
 default_value:

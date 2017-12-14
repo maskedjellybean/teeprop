@@ -10,7 +10,7 @@ field_name: field_garage
 entity_type: node
 bundle: apartment
 label: Garage
-description: 'Describe whether a garage is available. You may leave this blank if no garage is available.'
+description: 'Describe whether a garage is available. You may leave this blank if no garage is available. This is an optional field.'
 required: false
 translatable: false
 default_value: {  }

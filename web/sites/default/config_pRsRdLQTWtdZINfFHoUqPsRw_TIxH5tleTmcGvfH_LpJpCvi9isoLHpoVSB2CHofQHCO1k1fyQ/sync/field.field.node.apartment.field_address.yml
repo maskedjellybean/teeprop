@@ -12,10 +12,24 @@ field_name: field_address
 entity_type: node
 bundle: apartment
 label: Address
-description: 'Enter the address which will be used to generate a Google Map. You may need to exclude the apartment number in order for Google to find the address.'
+description: 'Enter the  apartment''s address which will be used to generate a Google Map. You may need to exclude the apartment number in order for Google to find the address.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    langcode: null
+    country_code: US
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
 default_value_callback: ''
 settings:
   available_countries:

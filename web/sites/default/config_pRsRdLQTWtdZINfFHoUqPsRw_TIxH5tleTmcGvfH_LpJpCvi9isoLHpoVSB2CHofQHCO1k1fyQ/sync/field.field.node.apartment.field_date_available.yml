@@ -12,7 +12,7 @@ field_name: field_date_available
 entity_type: node
 bundle: apartment
 label: 'Date Available'
-description: 'When with this apartment be available for move in?'
+description: 'When with this apartment be available for move in? This is an optional field.'
 required: false
 translatable: false
 default_value:
