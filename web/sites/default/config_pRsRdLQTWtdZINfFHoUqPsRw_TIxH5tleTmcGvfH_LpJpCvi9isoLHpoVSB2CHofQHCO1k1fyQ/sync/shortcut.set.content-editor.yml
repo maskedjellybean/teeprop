@@ -1,0 +1,6 @@
+uuid: 5b0f2653-52d4-4f3f-9018-526621bba3cb
+langcode: en
+status: true
+dependencies: {  }
+id: content-editor
+label: 'Content Editor'

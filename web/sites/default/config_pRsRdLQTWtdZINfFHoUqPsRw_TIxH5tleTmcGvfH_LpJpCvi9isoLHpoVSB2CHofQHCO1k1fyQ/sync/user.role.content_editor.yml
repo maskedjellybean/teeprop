@@ -1,0 +1,36 @@
+uuid: 96bd3d95-5e36-4cdb-a4eb-bee99489293a
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'administer nodes'
+  - 'create apartment content'
+  - 'create page content'
+  - 'create property content'
+  - 'delete any apartment content'
+  - 'delete any page content'
+  - 'delete any property content'
+  - 'delete own apartment content'
+  - 'delete own page content'
+  - 'delete own property content'
+  - 'edit any apartment content'
+  - 'edit any page content'
+  - 'edit any pdf content'
+  - 'edit any property content'
+  - 'edit own apartment content'
+  - 'edit own page content'
+  - 'edit own pdf content'
+  - 'edit own property content'
+  - 'use text format basic_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'
