@@ -66,7 +66,7 @@
       width: 20px;
       height: 20px;
       border-radius: 15px;
-      background-color: $c--light-green;
+      background-color: $c--orange;
       transition: background-color .3s ease-in-out;
 
       &:before {
@@ -75,12 +75,12 @@
 
       &:hover,
       &:active {
-        background-color: $c--medium-green;
+        background-color: $c--medium-blue;
       }
     }
 
     .slick-active button {
-      background-color: $c--medium-green;
+      background-color: $c--medium-blue;
     }
   }
 }

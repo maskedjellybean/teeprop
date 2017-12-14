@@ -84,7 +84,7 @@ label {
   &.dk-select-open-up .dk-select-options,
   &.dk-select-open-down .dk-select-options,
   &.dk-select-multi:focus .dk-select-options {
-    border-color: $c--light-green;
+    border-color: $c--orange;
     text-align: left;
   }
 
@@ -95,28 +95,28 @@ label {
   .dk-selected:hover:after, .dk-selected:focus:after,
   &.dk-select-open-up .dk-selected:after,
   &.dk-select-open-down .dk-selected:after {
-    border-left-color: $c--light-green;
+    border-left-color: $c--orange;
   }
 
   .dk-selected:before {
     border-width: 7px 7px 0;
-    border-top-color: $c--light-green;
+    border-top-color: $c--orange;
   }
 
   .dk-selected:hover:before, .dk-selected:focus:before,
   &.dk-select-open-up .dk-selected:before,
   &.dk-select-open-down .dk-selected:before {
-    border-top-color: $c--light-green;
+    border-top-color: $c--orange;
   }
 
   .dk-select-open-up .dk-selected:before,
   &.dk-select-open-down .dk-selected:before {
     border-width: 0 7px 7px;
-    border-bottom-color: $c--light-green;
+    border-bottom-color: $c--orange;
   }
 
   .dk-select-options .dk-option-highlight,
   .dk-option-selected {
-    background-color: $c--light-green;
+    background-color: $c--orange;
   }
 }

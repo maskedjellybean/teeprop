@@ -4,7 +4,7 @@
 
 
 a {
-  color: $c--light-green-2;
+  color: $c--orange;
   transition: color .3s ease-in-out;
 
   &:hover,
@@ -22,7 +22,7 @@ a.button--primary {
   min-width: 150px;
   padding: 15px 30px;
   line-height: 1;
-  background-color: $c--light-green;
+  background-color: $c--orange;
   text-decoration: none;
   text-align: center;
   color: $c--white;
@@ -50,7 +50,7 @@ a.button--primary {
   &:hover,
   &:focus {
     background-color: $c--orange--alt;
-    // color: $c--light-green;
+    // color: $c--orange;
     // &:after {
     //   border-color: #d5e6c5;
     // }
