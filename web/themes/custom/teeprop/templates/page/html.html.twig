@@ -44,16 +44,18 @@
     <div class="bg-wrapper">
       <div class="bg-wrapper-2">
         <div class="bg-wrapper-3">
-          {#
-            Keyboard navigation/accessibility link to main content section in
-            page.html.twig.
-          #}
-          <a href="#main-content" class="visually-hidden focusable skip-link">
-            {{ 'Skip to main content'|t }}
-          </a>
-          {{ page_top }}
-          {{ page }}
-          {{ page_bottom }}
+          <div class="bg-wrapper-4">
+            {#
+              Keyboard navigation/accessibility link to main content section in
+              page.html.twig.
+            #}
+            <a href="#main-content" class="visually-hidden focusable skip-link">
+              {{ 'Skip to main content'|t }}
+            </a>
+            {{ page_top }}
+            {{ page }}
+            {{ page_bottom }}
+          </div>
         </div>
       </div>
     </div>

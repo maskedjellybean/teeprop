@@ -225,9 +225,19 @@ label {
 /**
  * Header/Navbar.
  */
-@media (min-width: 670px) {
-  .layout-container {
-    padding-top: 115px; } }
+.logo {
+  display: none; }
+  .logo img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto; }
+  @media (min-width: 670px) {
+    .logo {
+      display: block;
+      width: 300px;
+      height: 115px;
+      margin: 0 auto;
+      padding: 20px 0 15px; } }
 
 .header {
   position: -webkit-sticky;
@@ -415,22 +425,21 @@ body {
   background-color: #2E464D; }
 
 .bg-wrapper {
-  background-size: 450px;
-  background: -webkit-linear-gradient(top, #DBE0CD 0%, #ffffff 56%);
-  background: linear-gradient(to bottom, #DBE0CD 0%, #ffffff 56%);
+  background: -webkit-linear-gradient(top, #DBE0CD 0%, #ffffff 56%, #2E464D);
+  background: linear-gradient(to bottom, #DBE0CD 0%, #ffffff 56%, #2E464D);
   background-position-y: 490px;
   background-repeat-y: no-repeat; }
-
-.bg-wrapper-2 {
-  background-image: url(../../images/blue-bg.jpg);
-  background-repeat: repeat-x;
-  background-position: center -99px; }
 
 .bg-wrapper-3 {
   background-image: url(../../images/blue-bg--flipped.jpg);
   background-repeat: repeat-x;
-  background-position: center 290px; }
-  .bg-wrapper-3:after {
+  background-position: center top; }
+
+.bg-wrapper-4 {
+  background-image: url(../../images/blue-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: center -99px; }
+  .bg-wrapper-4:after {
     position: absolute;
     top: 174px;
     left: 0;
@@ -634,6 +643,9 @@ body {
   .block-id--block-views-block-apartments-block-avail .view-footer {
     margin-top: 30px;
     text-align: center; }
+  @media (min-width: 670px) {
+    .block-id--block-views-block-apartments-block-avail {
+      padding-bottom: 0; } }
   @media (min-width: 992px) {
     .block-id--block-views-block-apartments-block-avail {
       padding-bottom: 0; }

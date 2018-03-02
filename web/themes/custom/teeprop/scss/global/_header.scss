@@ -5,8 +5,26 @@
 $application-button--min-width: 215px;
 
 .layout-container {
+  // @include breakpoint($bp--medium) {
+  //   padding-top: 115px;
+  // }
+}
+
+.logo {
+  display: none;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   @include breakpoint($bp--medium) {
-    padding-top: 115px;
+    display: block;
+    width: 300px;
+    height: 115px;
+    margin: 0 auto;
+    padding: 20px 0 15px;
   }
 }
 

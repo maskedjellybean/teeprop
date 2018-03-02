@@ -23,6 +23,14 @@ function teeprop_preprocess_html(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function teeprop_preprocess_page(&$vars) {
+  $vars['base_path'] = base_path();
+
+}
+
+/**
  * Implements template_preprocess_node().
  */
 function teeprop_preprocess_node(&$vars) {

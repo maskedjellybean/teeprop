@@ -95,22 +95,26 @@ body {
 
 .bg-wrapper {
   // background-color: #A2A48D;
-  background-size: 450px;
-  background: linear-gradient(to bottom, #DBE0CD 0%, #ffffff 56%);
+  // background-size: 450px;
+  background: linear-gradient(to bottom, #DBE0CD 0%, #ffffff 56%, #2E464D);
   background-position-y: 490px;
   background-repeat-y: no-repeat;
 }
 
 .bg-wrapper-2 {
-  background-image: url(../../images/blue-bg.jpg);
-  background-repeat: repeat-x;
-  background-position: center -99px;
+
 }
 
 .bg-wrapper-3 {
   background-image: url(../../images/blue-bg--flipped.jpg);
   background-repeat: repeat-x;
-  background-position: center 290px;
+  background-position: center top;
+}
+
+.bg-wrapper-4 {
+  background-image: url(../../images/blue-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: center -99px;
 
 
   &:after {
