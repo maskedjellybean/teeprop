@@ -448,13 +448,13 @@ body {
     height: 60px;
     background-color: #617A77; }
 
-.toolbar-horizontal .bg-wrapper-3:after {
+.toolbar-horizontal .bg-wrapper-4:after {
   top: 214px; }
 
-.toolbar-horizontal.toolbar-tray-open .bg-wrapper-3:after {
+.toolbar-horizontal.toolbar-tray-open .bg-wrapper-4:after {
   top: 254px; }
 
-.toolbar-vertical .bg-wrapper-3:after {
+.toolbar-vertical .bg-wrapper-4:after {
   top: 214px; }
 
 /**

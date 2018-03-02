@@ -131,12 +131,12 @@ body {
 // Background images - Logged in and admin bar at top.
 
 .toolbar-horizontal {
-  .bg-wrapper-3:after {
+  .bg-wrapper-4:after {
     top: 214px;
   }
 
   &.toolbar-tray-open {
-    .bg-wrapper-3:after {
+    .bg-wrapper-4:after {
       top: 254px;
     }
   }
@@ -145,7 +145,7 @@ body {
 // Background images - Logged in and admin bar at side.
 
 .toolbar-vertical {
-  .bg-wrapper-3:after {
+  .bg-wrapper-4:after {
     top: 214px;
   }
 }
