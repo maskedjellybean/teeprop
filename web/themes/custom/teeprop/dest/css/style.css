@@ -1269,10 +1269,10 @@ body {
     clear: none;
     padding: 30px; }
   .node--type--apartment.node--view-mode--full .apartment-header__right {
-    width: 41.66667%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 33.33333%;
+    width: 66.66667%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
     clear: none;
     padding: 30px 40px; }
   .node--type--apartment.node--view-mode--full .apartment-content:after {

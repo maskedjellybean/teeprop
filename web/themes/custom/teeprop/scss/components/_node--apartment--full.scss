@@ -176,7 +176,7 @@
       }
 
       &__right {
-        @include grid-span(5, 5);
+        @include grid-span(8, 5);
         padding: 30px 40px;
       }
     }
