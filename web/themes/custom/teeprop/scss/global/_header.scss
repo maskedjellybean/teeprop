@@ -4,27 +4,29 @@
 
 $application-button--min-width: 215px;
 
-.layout-container {
-  // @include breakpoint($bp--medium) {
-  //   padding-top: 115px;
-  // }
-}
 
 .logo {
   display: none;
 
-  img {
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
-  }
-
-  @include breakpoint($bp--medium) {
+  // DESKTOP
+  @include breakpoint($bp--large) {
     display: block;
     width: 300px;
     height: 115px;
     margin: 0 auto;
     padding: 20px 0 15px;
+    opacity: 1;
+    transition: .5s opacity .2s;
+
+    img {
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .header-sticky & {
+      opacity: 0;
+    }
   }
 }
 
@@ -36,6 +38,20 @@ $application-button--min-width: 215px;
   background-color: #647763;
   color: $c--tan;
   box-shadow: 0px 3px 12px -3px #333;
+
+  .logo--mobile {
+    position: absolute;
+    left: $spacing--h--small;
+    top: 0;
+    height: $h--navbar;
+    padding: 6px 0;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
 
   .header__menu-toggle {
     position: absolute;
@@ -68,6 +84,21 @@ $application-button--min-width: 215px;
     max-width: $site-max-width;
     margin: 0 auto;
     padding-top: $h--navbar;
+    overflow: hidden;
+  }
+
+  .logo--sticky-desktop {
+    position: absolute;
+    left: $spacing--h--small;
+    top: 0;
+    height: $h--navbar;
+    padding: 6px 0;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
   }
 
   ul.menu {
@@ -103,13 +134,35 @@ $application-button--min-width: 215px;
 
   @include breakpoint($bp--large) {
 
+    .logo--mobile {
+      display: none;
+    }
+
     .header__menu-toggle {
       display: none;
     }
 
     .block-menu {
       display: block;
+      position: relative;
       padding-top: 0;
+    }
+
+    .logo--sticky-desktop {
+      opacity: 0;
+      left: $spacing--h--medium;
+      margin-top: -$h--navbar;
+      transition: .3s margin, .5s opacity;
+      transform: translateZ(0);
+      pointer-events: none;
+
+      .header-sticky & {
+        opacity: 1;
+        margin-top: 0;
+        transition: .3s margin, .3s opacity;
+        transform: translateZ(0);
+        pointer-events: all;
+      }
     }
 
     ul.menu {

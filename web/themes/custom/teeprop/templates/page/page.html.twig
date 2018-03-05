@@ -44,11 +44,14 @@
 #}
 <div class="layout-container">
 
-  <div class="logo">
+  <a class="logo" href="/">
     <img src="{{ base_path ~ directory }}/images/logoV1--web--white.png" />
-  </div>
+  </a>
 
   <header class="header" role="banner">
+    <a class="logo--mobile" href="/">
+      <img src="{{ base_path ~ directory }}/images/logoV1--web--white.png" />
+    </a>
     <div class="header__menu-toggle"></div>
     {{ page.header }}
   </header>

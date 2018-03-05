@@ -27,7 +27,6 @@ function teeprop_preprocess_html(&$vars) {
  */
 function teeprop_preprocess_page(&$vars) {
   $vars['base_path'] = base_path();
-
 }
 
 /**
@@ -78,6 +77,8 @@ function teeprop_theme_suggestions_block_alter(array &$suggestions, array $vars)
  * @param $vars
  */
 function teeprop_preprocess_block(&$vars) {
+  $vars['base_path'] = base_path();
+
   // Hero block: Build image paths for template.
   if (isset($vars['content']['#block_content']) && $vars['elements']['content']['#block_content']->bundle() == 'hero') {
     foreach($vars['content']['field_hero_images']['#items']->getValue() as $key => $item) {
