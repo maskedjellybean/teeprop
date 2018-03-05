@@ -125,7 +125,7 @@ class TeePropContactForm extends FormBase {
     $mailManager = \Drupal::service('plugin.manager.mail');
     $module = 'tee_prop_contact_form';
     $key = 'contact_form_submit';
-    $to = 'benteegarden@gmail.com';
+    $to = 'debteegarden17@gmail.com';
     $params['name'] = $form_state->getValue('name');
     $params['email'] = $form_state->getValue('email');
     $params['message'] = $form_state->getValue('message');
