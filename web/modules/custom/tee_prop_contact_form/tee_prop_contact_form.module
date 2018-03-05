@@ -20,10 +20,17 @@ function tee_prop_contact_form_mail($key, &$message, $params) {
       $message['subject'] = t('Teegarden Properties form submission by @name', array('@name' => $params['name']), $options);
       $body = <<<'EOD'
       New form submission from teegardenproperties.com!
-      Name: @name
-      Email: @email
-      Pets: @pet
-      Message: 
+
+      Name:
+      @name
+
+      Email:
+      @email
+
+      Pets:
+      @pet
+
+      Message:
       @message
 EOD;
       $body_replace = array(
