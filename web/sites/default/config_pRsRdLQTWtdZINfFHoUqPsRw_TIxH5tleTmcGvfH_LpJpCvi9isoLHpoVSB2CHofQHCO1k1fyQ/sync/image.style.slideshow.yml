@@ -5,10 +5,11 @@ dependencies: {  }
 name: slideshow
 label: Slideshow
 effects:
-  2f0f8805-ab2e-4235-a3bb-4017418baff2:
-    uuid: 2f0f8805-ab2e-4235-a3bb-4017418baff2
-    id: image_scale_and_crop
-    weight: 1
+  7e0df174-18df-4feb-92e9-2e5f58378478:
+    uuid: 7e0df174-18df-4feb-92e9-2e5f58378478
+    id: image_scale
+    weight: 2
     data:
       width: 800
       height: 600
+      upscale: true
