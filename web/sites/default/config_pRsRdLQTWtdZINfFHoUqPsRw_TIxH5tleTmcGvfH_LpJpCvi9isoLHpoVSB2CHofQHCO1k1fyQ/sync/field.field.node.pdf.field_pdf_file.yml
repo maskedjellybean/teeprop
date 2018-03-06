@@ -11,7 +11,7 @@ id: node.pdf.field_pdf_file
 field_name: field_pdf_file
 entity_type: node
 bundle: pdf
-label: 'PDF File'
+label: File
 description: ''
 required: true
 translatable: false
@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: pdfs
-  file_extensions: pdf
+  file_extensions: 'pdf xls xlt xlm xlsx xlsm xltx xltm'
   max_filesize: ''
   description_field: false
   handler: 'default:file'
