@@ -8,6 +8,12 @@
   margin-right: auto;
   margin-bottom: 0;
 
+  .slick-slide {
+    img {
+      margin: 0 auto;
+    }
+  }
+
   .slick-arrow {
     z-index: 50;
     top: calc(50% - 30px);
