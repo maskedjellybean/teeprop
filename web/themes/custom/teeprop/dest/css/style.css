@@ -1066,6 +1066,9 @@ body {
   .view--all-apartments .views-row {
     width: 33%; } }
 
+.block-id--block-views-block-all-apartments-west {
+  padding-top: 0; }
+
 /**
  * Read More link.
  */
