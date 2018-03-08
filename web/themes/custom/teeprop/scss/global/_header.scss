@@ -4,7 +4,7 @@
 
 $application-button--min-width: 215px;
 
-
+// Logo
 .logo {
   display: none;
 
@@ -30,6 +30,7 @@ $application-button--min-width: 215px;
   }
 }
 
+// Header
 .header {
   position: sticky;
   top: 0;
@@ -167,7 +168,8 @@ $application-button--min-width: 215px;
 
     ul.menu {
       margin: 0;
-      padding-left: $application-button--min-width;
+      // @TODO
+      // padding-left: $application-button--min-width;
       text-align: center;
       background-color: transparent;
 
