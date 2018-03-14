@@ -359,6 +359,7 @@ label {
         pointer-events: all; }
     .header ul.menu {
       margin: 0;
+      padding-left: 215px;
       text-align: center;
       background-color: transparent; }
       .header ul.menu .menu-item {
