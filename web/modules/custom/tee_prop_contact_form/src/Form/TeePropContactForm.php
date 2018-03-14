@@ -98,7 +98,7 @@ class TeePropContactForm extends FormBase {
    */
   private function loadApartments() {
     $results = db_query(
-      "SELECT node_field_data.title, node__field_available.field_available_value FROM node_field_data INNER JOIN node__field_available ON node_field_data.nid = node__field_available.entity_id AND node__field_available.field_available_value = 1"
+      "SELECT node_field_data.title, node__field_available.field_available_value FROM node_field_data INNER JOIN node__field_available ON node_field_data.nid = node__field_available.entity_id WHERE node__field_available.field_available_value = 1 AND node_field_data.status = 1"
     )->fetchAllKeyed(0,0);
     if (!empty($results)) {
       sort($results);
