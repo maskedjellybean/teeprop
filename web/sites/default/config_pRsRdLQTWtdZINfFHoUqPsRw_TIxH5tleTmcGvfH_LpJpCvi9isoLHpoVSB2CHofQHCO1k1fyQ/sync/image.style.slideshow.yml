@@ -1,7 +1,9 @@
 uuid: 518729f1-2cce-47ef-a494-433740fd57cb
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: slideshow
 label: Slideshow
 effects:
@@ -13,3 +15,9 @@ effects:
       width: 800
       height: 600
       upscale: true
+  cd6a9b83-8e5e-4f07-8694-860864a56e50:
+    uuid: cd6a9b83-8e5e-4f07-8694-860864a56e50
+    id: image_effects_auto_orient
+    weight: 2
+    data:
+      scan_exif: true
