@@ -142,7 +142,7 @@ class TeePropContactForm extends FormBase {
       $params['apartment'] = '';
     }
 
-    $params['pet'] = $form['pet']['#options'][$form_state->getValue('pet')];
+    $params['pet'] = $form['pet']['#options'][$form_state->getValue('pet')]->render();
     $params['message'] = $form_state->getValue('message');
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = true;
