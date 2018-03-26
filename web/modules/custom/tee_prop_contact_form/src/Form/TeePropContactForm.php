@@ -128,11 +128,11 @@ class TeePropContactForm extends FormBase {
     $params['email'] = $form_state->getValue('email');
 
     if (!empty($form_state->getValue('apartment'))) {
-      $apartment_values = $form_state->getValue('apartment');
+      $apartment_values = array_keys($form_state->getValue('apartment'));
       $apartments = '';
-      foreach ($apartment_values as $key => $apartment_value) {
+      foreach ($apartment_values as $value_key => $apartment_value) {
         $apartments .= $form['apartment']['#options'][$apartment_value];
-        if ($key + 1 != count($apartment_values)) {
+        if ($value_key + 1 != count($apartment_values)) {
           $apartments .= ', ';
         }
       }
