@@ -22,8 +22,6 @@ class TeePropContactForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // $form['#prefix'] = '<div class="form__contact-info"><p>'. t('Please call or text us at ') . '<a href="tel:920-342-5990">920-342-5990</a>' . t(', or fill out the form below to email us.') .
-    //   '<br>' . t('If there are no apartments currently available, we can place you on our waiting list.') . '<br>' . t('Thanks!') . '</div>';
 
     $form['name'] = array(
       '#type' => 'textfield',
@@ -128,12 +126,29 @@ class TeePropContactForm extends FormBase {
     $to = 'benteegarden@gmail.com';
     $params['name'] = $form_state->getValue('name');
     $params['email'] = $form_state->getValue('email');
+
+    if (!empty($form_state->getValue('apartment'))) {
+      $apartment_values = $form_state->getValue('apartment');
+      $apartments = '';
+      foreach ($apartment_values as $key => $apartment_value) {
+        $apartments .= $form['apartment']['#options'][$apartment_value];
+        if ($key + 1 != count($apartment_values)) {
+          $apartments .= ', ';
+        }
+      }
+      $params['apartment'] = $apartments;
+    }
+    else {
+      $params['apartment'] = '';
+    }
+
+    $params['pet'] = $form['pet']['#options'][$form_state->getValue('pet')];
     $params['message'] = $form_state->getValue('message');
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = true;
     $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
     if ($result['result'] !== true) {
-      drupal_set_message(t('Sorry, the form was not submitted due to a problem with the website. Please call us instead.'), 'error');
+      drupal_set_message(t('Sorry, the form was not submitted due to a problem with our website. Please call us instead.'), 'error');
     }
     else {
       drupal_set_message(t("Thank you for your interest. We'll contact you soon!"));
