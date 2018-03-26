@@ -26,15 +26,19 @@ function tee_prop_contact_form_mail($key, &$message, $params) {
 
       Email:
       @email
+      
+      Apartment(s):
+      @apartment
 
       Pets:
       @pet
 
-      Message:
+      Message/Questions:
       @message
 EOD;
       $body_replace = array(
         '@name' => $params['name'],
+        '@apartment' => $params['apartment'],
         '@email' => $params['email'],
         '@pet' => $params['pet'],
         '@message' => $params['message']
