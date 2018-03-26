@@ -127,8 +127,11 @@ class TeePropContactForm extends FormBase {
     $params['name'] = $form_state->getValue('name');
     $params['email'] = $form_state->getValue('email');
 
-    if (!empty($form_state->getValue('apartment'))) {
-      $apartment_values = array_keys($form_state->getValue('apartment'));
+    // For some stupid reason we have to use getCompleteForm() here
+    // because getValue() is returning all the options for the field
+    // regardless of what is selected.
+    if (!empty($form_state->getCompleteForm()['apartment']['#value'])) {
+      $apartment_values = array_keys($form_state->getCompleteForm()['apartment']['#value']);
       $apartments = '';
       foreach ($apartment_values as $value_key => $apartment_value) {
         $apartments .= $form['apartment']['#options'][$apartment_value];
