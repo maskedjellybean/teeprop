@@ -1,7 +1,0 @@
-# example.form:
-#   path: '/contact-form'
-#   defaults:
-#     _title: 'Contact Us'
-#     _form: '\Drupal\tee_prop_contact_form\Form\TeePropContactForm'
-#   requirements:
-#     _permission: 'access content'
