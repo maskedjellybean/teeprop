@@ -22,3 +22,7 @@ web/themes/custom/teeprop/dest/css/*.css.map
 # Ignore .htaccess
 .htaccess
 !web/.htaccess
+
+# Ignore Drush alias
+# This will allow devs to have different local alias settings
+/drush/sites/tee-prop.site.yml
