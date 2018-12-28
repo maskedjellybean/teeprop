@@ -14,6 +14,7 @@ effects:
     data:
       width: 480
       height: 360
+      anchor: center-center
   74b77347-5614-41b8-b426-f183f5c6a1c6:
     uuid: 74b77347-5614-41b8-b426-f183f5c6a1c6
     id: image_effects_auto_orient
