@@ -4844,68 +4844,6 @@
         ]
     },
     {
-        "name": "drupal/image_effects",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/image_effects",
-            "reference": "8.x-2.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-2.2.zip",
-            "reference": "8.x-2.2",
-            "shasum": "8c816fc89ba51e2234d33476d31f69cf659e49e2"
-        },
-        "require": {
-            "drupal/core": ">=8.2.0",
-            "drupal/file_mdm_exif": "^1",
-            "drupal/file_mdm_font": "^1"
-        },
-        "conflict": {
-            "drupal/imagemagick": "<2.3"
-        },
-        "require-dev": {
-            "drupal/imagemagick": "*",
-            "drupal/jquery_colorpicker": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.2",
-                "datestamp": "1543319281",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "mondrake",
-                "homepage": "https://www.drupal.org/user/1307444"
-            },
-            {
-                "name": "slashrsm",
-                "homepage": "https://www.drupal.org/user/744628"
-            }
-        ],
-        "description": "Provides effects and operations for the Image API.",
-        "homepage": "https://www.drupal.org/project/image_effects",
-        "support": {
-            "source": "http://cgit.drupalcode.org/image_effects"
-        }
-    },
-    {
         "name": "drupal/entity_reference_revisions",
         "version": "1.6.0",
         "version_normalized": "1.6.0.0",
@@ -8155,6 +8093,68 @@
         "homepage": "https://www.drupal.org/project/paragraphs",
         "support": {
             "source": "http://cgit.drupalcode.org/paragraphs"
+        }
+    },
+    {
+        "name": "drupal/image_effects",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/image_effects",
+            "reference": "8.x-2.3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-2.3.zip",
+            "reference": "8.x-2.3",
+            "shasum": "59d1adbfc722b0e0f447d1aedda7cf95e2701425"
+        },
+        "require": {
+            "drupal/core": ">=8.2.0",
+            "drupal/file_mdm_exif": "^1",
+            "drupal/file_mdm_font": "^1"
+        },
+        "conflict": {
+            "drupal/imagemagick": "<2.3"
+        },
+        "require-dev": {
+            "drupal/imagemagick": "*",
+            "drupal/jquery_colorpicker": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.3",
+                "datestamp": "1547928180",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "mondrake",
+                "homepage": "https://www.drupal.org/user/1307444"
+            },
+            {
+                "name": "slashrsm",
+                "homepage": "https://www.drupal.org/user/744628"
+            }
+        ],
+        "description": "Provides effects and operations for the Image API.",
+        "homepage": "https://www.drupal.org/project/image_effects",
+        "support": {
+            "source": "http://cgit.drupalcode.org/image_effects"
         }
     }
 ]
