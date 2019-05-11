@@ -143,6 +143,10 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         array (
             'FontLib\\' => 8,
         ),
+        'E' => 
+        array (
+            'Egulias\\EmailValidator\\' => 23,
+        ),
         'D' => 
         array (
             'Drush\\Internal\\' => 15,
@@ -433,6 +437,10 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
+        'Egulias\\EmailValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
         'Drush\\Internal\\' => 
         array (
             0 => __DIR__ . '/..' . '/drush/drush/internal-copy',
@@ -497,8 +505,8 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         array (
             0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
-            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            2 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
         ),
         'Consolidation\\SiteAlias\\' => 
         array (
@@ -583,13 +591,13 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
             ),
+            'PEAR' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
+            ),
         ),
         'E' => 
         array (
-            'Egulias\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/egulias/email-validator/src',
-            ),
             'EasyRdf_' => 
             array (
                 0 => __DIR__ . '/..' . '/easyrdf/easyrdf/lib',
@@ -614,6 +622,24 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
                 0 => __DIR__ . '/..' . '/dflydev/dot-access-configuration/src',
             ),
         ),
+        'C' => 
+        array (
+            'Console' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/console_getopt',
+            ),
+        ),
+        'A' => 
+        array (
+            'Archive_Tar' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/archive_tar',
+            ),
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -1086,6 +1112,7 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
             $loader->prefixLengthsPsr4 = ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66::$classMap;
 
         }, null, ClassLoader::class);
