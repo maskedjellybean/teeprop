@@ -1,0 +1,1 @@
+!function(e){"use strict";e(".slideshow").slick({arrows:!0,dots:!0,swipe:!0,autoplay:!0,pauseOnDotsHover:!0,autoplaySpeed:5e3,speed:600})}(jQuery,Drupal);

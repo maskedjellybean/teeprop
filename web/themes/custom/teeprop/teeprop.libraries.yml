@@ -2,11 +2,11 @@ global:
   version: 1.x
   css:
     theme:
-      js/lib/dropkickjs/lib/css/dropkick.css: {}
-      dest/css/style.css: {}
+      build/css/dropkick.min.css: {}
+      build/css/style.min.css: {}
   js:
-    js/lib/dropkickjs/lib/dropkick.js: {}
-    js/global.js: {}
+    build/js/dropkick.min.js: {}
+    build/js/global.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
@@ -15,8 +15,8 @@ global:
 slick:
   css:
     theme:
-      js/lib/slick/slick.css: {}
-      js/lib/slick/slick-theme.css: {}
+      build/css/slick.min.css: {}
+      build/css/slick-theme.min.css: {}
   js:
-    js/lib/slick/slick.min.js: {}
-    js/slick-init.js: {}
+    build/js/slick.min.js: {}
+    build/js/slick-init.min.js: {}

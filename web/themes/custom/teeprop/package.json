@@ -1,22 +1,41 @@
 {
-  "name": "teeprop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build-css": "node-sass --include-path scss scss/style.scss dest/css/style.css; gulp autoprefixer;",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  "name": "TeeProp",
+  "description": "Theme for Teegarden Properties",
+  "private": true,
+  "engines": {
+    "node": ">= 11.0.0",
+    "npm": ">= 6.4.1"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.6.1",
-    "eyeglass": "^1.1.2",
-    "gulp": "^3.9.1",
+    "breakpoint-sass": "^2.7.1",
+    "eyeglass": "^1.6.0",
+    "foundation-sites": "^6.5.0",
+    "gulp": "^4.0.2",
+    "gulp-add-src": "^1.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^6.3.0",
-    "gulp-sourcemaps": "^2.4.0",
-    "node-sass": "^3.13.0",
-    "nodemon": "^1.11.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "motion-ui": "^2.0.3",
+    "n": "^2.1.12",
+    "natives": "^1.1.6",
+    "nodemon": "^1.19.1",
+    "run-sequence": "^1.1.2",
+    "sass-lint-auto-fix": "^0.16.1",
     "singularitygs": "^1.7.0"
+  },
+  "scripts": {
+    "lint": "sass-lint -v -q",
+    "lint:fix": "sass-lint-auto-fix --config .sass-lint-auto-fix.yml;"
   }
 }

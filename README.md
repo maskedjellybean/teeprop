@@ -40,3 +40,22 @@
 * Drush 9.5.2 has been installed globally via Composer at `/home/megank9/.composer/vendor/drush`.
 * We have specified the path to the _project_ installation of Drush in `tee-prop.site.yml`, so that when we run a Drush command for the Prod alias, 
 the project installation of Drush is used instead of the global.
+
+
+# Theme
+
+## Compiling SCSS to CSS
+
+`gulp build-css`
+
+## Minifying JS
+
+`gulp build-js`
+
+## Compiling/minifying SCSS and JS
+
+`gulp build`
+
+## Watching SCSS and JS
+
+`gulp watch`
