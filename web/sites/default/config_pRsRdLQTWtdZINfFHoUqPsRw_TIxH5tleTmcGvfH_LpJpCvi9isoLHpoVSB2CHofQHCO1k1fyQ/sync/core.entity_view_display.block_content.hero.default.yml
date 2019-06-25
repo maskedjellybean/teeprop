@@ -6,16 +6,17 @@ dependencies:
     - block_content.type.hero
     - field.field.block_content.hero.field_hero_images
     - field.field.block_content.hero.field_hero_overlay_image
-    - field.field.block_content.hero.field_hero_text
+    - field.field.block_content.hero.field_hero_text_formatted
   module:
     - image
+    - text
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
   field_hero_images:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: hero_half
@@ -32,11 +33,11 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_hero_text:
+  field_hero_text_formatted:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
 hidden: {  }

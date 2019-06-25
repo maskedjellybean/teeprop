@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Apartment - Bedrooms'
 vid: apartment_bedrooms
 description: ''
-hierarchy: 0
 weight: 0

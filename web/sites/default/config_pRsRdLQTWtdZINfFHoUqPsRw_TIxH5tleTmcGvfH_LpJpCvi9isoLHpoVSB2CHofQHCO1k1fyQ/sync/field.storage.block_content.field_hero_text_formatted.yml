@@ -1,16 +1,16 @@
-uuid: 79652cc2-68d4-46b9-9995-734dee844429
+uuid: b876e1d9-7701-40c5-b730-b91e14eb45b6
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_hero_text
-field_name: field_hero_text
+    - text
+id: block_content.field_hero_text_formatted
+field_name: field_hero_text_formatted
 entity_type: block_content
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Apartment - Location'
 vid: apartment_location
 description: ''
-hierarchy: 0
 weight: 0
