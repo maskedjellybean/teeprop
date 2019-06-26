@@ -1,0 +1,15 @@
+uuid: bfc2db79-9e18-4fa0-acf7-3e2aa1f201da
+langcode: en
+status: true
+dependencies: {  }
+name: hero_full
+label: 'Hero Full'
+effects:
+  3df428cf-76a1-41cb-bddc-d463c8ed405e:
+    uuid: 3df428cf-76a1-41cb-bddc-d463c8ed405e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 585
+      anchor: center-center
