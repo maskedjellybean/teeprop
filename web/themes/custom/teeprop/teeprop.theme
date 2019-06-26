@@ -77,10 +77,22 @@ function teeprop_theme_suggestions_block_alter(array &$suggestions, array $vars)
  * @param $vars
  */
 function teeprop_preprocess_block(&$vars) {
+  if ($vars['base_plugin_id'] == 'block_content') {
+    $renderer = \Drupal::service('renderer');
+    $renderer->addCacheableDependency($vars, $vars['content']['#block_content']);
+  }
+
+
   $vars['base_path'] = base_path();
 
   // Hero block: Build image paths for template.
   if (isset($vars['content']['#block_content']) && $vars['elements']['content']['#block_content']->bundle() == 'hero') {
+    if (count($vars['content']['field_hero_images']['#items']) == 1) {
+      $file = File::load($vars['content']['field_hero_images']['#items']->getValue()[0]['target_id']);
+      $uri = $file->getFileUri();
+      $vars['content']['image_path_full'] = ImageStyle::load('hero_full')->buildUrl($uri);
+    }
+
     foreach($vars['content']['field_hero_images']['#items']->getValue() as $key => $item) {
       $file = File::load($item['target_id']);
       $uri = $file->getFileUri();

@@ -56,7 +56,7 @@
     {% elseif content.field_hero_images.0 %}
       <div class="hero__one-col-wrapper">
         <div class="col col--full">
-          <div class="col-content--image" style="background-image: url( {{ file_url(content.field_hero_images.0['#item'].entity.uri.value) }} );">
+          <div class="col-content--image" style="background-image: url( {{ content.image_path_full }} );">
           </div>
         </div>
       </div>
