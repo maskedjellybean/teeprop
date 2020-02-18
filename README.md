@@ -42,6 +42,18 @@
 the project installation of Drush is used instead of the global.
 
 
+# Versions
+
+# PHP
+
+7.2
+
+# Node
+
+12.0.0
+
+(Run `nvm use` in teeprop theme directory to set automatically)
+
 # Theme
 
 ## Compiling SCSS to CSS
