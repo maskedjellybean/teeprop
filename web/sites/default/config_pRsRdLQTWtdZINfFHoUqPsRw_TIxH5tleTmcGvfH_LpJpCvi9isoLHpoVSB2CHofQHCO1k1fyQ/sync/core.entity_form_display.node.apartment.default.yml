@@ -44,6 +44,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Availability
+      region: content
     group_location_address:
       children:
         - field_address
@@ -57,6 +58,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Address
+      region: content
     group_apartment_information:
       children:
         - field_bedrooms
@@ -77,6 +79,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Apartment Information'
+      region: content
     group_images:
       children:
         - field_primary_image
@@ -90,6 +93,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Images
+      region: content
 id: node.apartment.default
 targetEntityType: node
 bundle: apartment
