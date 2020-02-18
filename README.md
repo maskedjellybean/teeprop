@@ -80,6 +80,10 @@ Check for updates using Composer:
 
 ```composer outdated```
 
+Check for security updates using Drush:
+
+```drush pm:security```
+
 ## Update Drupal Core
 
 Run:
@@ -100,7 +104,7 @@ you probably need to specifically include the dependencies that are listed as pa
 #### No changes after running composer update
 
 If composer update finds no updates, run the following command to check if any dependencies 
-prohibit updating. Get the version number by running `drush pm-updatestatus`.
+prohibit updating. Get the version number by running `composer outdated`.
 
 ```composer prohibits drupal/core:[VERSION_NUMBER]```
 
