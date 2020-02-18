@@ -71,3 +71,68 @@ the project installation of Drush is used instead of the global.
 ## Watching SCSS and JS
 
 `gulp watch`
+
+# Updating Drupal core and contrib modules
+
+Drupal core and contrib modules should be updated using Composer.
+
+Check for updates using Composer:
+
+```composer outdated```
+
+## Update Drupal Core
+
+Run:
+
+```composer update drupal/core --with-dependencies```
+
+```drush updb -y```
+
+### Issues updating Drupal Core
+
+#### "Your requirements could not be resolved to an installable set of packages"
+
+If you run into an error like "Your requirements could not be resolved to an installable set of packages.",
+you probably need to specifically include the dependencies that are listed as part of the error message. For example:
+
+```composer update drupal/core doctrine/inflector nikic/php-parser sebastian/comparator --with-dependencies```
+
+#### No changes after running composer update
+
+If composer update finds no updates, run the following command to check if any dependencies 
+prohibit updating. Get the version number by running `drush pm-updatestatus`.
+
+```composer prohibits drupal/core:[VERSION_NUMBER]```
+
+After determining what has prohibited the update, include the dependency in the composer update command. For example:
+
+```composer update drupal/core twig/twig symfony/http-foundation --with-dependencies```
+
+### After updating Drupal Core
+
+#### Run database updates, clear caches, export config
+
+Often core updates will come with database update hooks that need to be run. Occasionally these update hooks
+will result in the database being updated in a way that causes config to be overridden.
+
+* Run database updates:
+
+```drush updb -y; drush cr;```
+
+* Check to make sure that the core update was applied properly (check the version number that returns):
+
+```drush status;```
+
+* Export config:
+
+```drush cex vcs;```
+
+* Examine the config export and make sure the changes seem related to the update hooks that ran before committing. 
+
+## Update a contrib module
+
+Run:
+
+```composer update drupal/[MODULE_NAME]```
+
+```drush updb -y```
