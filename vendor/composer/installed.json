@@ -3393,36 +3393,33 @@
     },
     {
         "name": "drupal/file_mdm",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/file_mdm.git",
-            "reference": "8.x-1.1"
+            "reference": "8.x-2.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/file_mdm-8.x-1.1.zip",
-            "reference": "8.x-1.1",
-            "shasum": "7f354aec6f89e3141c2aa1fb3747ad5d4578c13f"
+            "url": "https://ftp.drupal.org/files/projects/file_mdm-8.x-2.1.zip",
+            "reference": "8.x-2.1",
+            "shasum": "5c3d75622299ebddc0e8456bb08bb371da8771bd"
         },
         "require": {
-            "drupal/core": "~8.0",
-            "lsolesen/pel": "0.9.6",
-            "phenx/php-font-lib": "0.5",
-            "php": ">=5.6"
+            "drupal/core": "^8.8 || ^9",
+            "lsolesen/pel": "^0.9.8",
+            "phenx/php-font-lib": "^0.5.2",
+            "php": ">=7"
         },
         "require-dev": {
             "drupal/image_effects": "*"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1488273785",
+                "version": "8.x-2.1",
+                "datestamp": "1586801064",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3443,28 +3440,22 @@
         "description": "Provides a service to manage file metadata.",
         "homepage": "https://www.drupal.org/project/file_mdm",
         "support": {
-            "source": "http://cgit.drupalcode.org/file_mdm"
+            "source": "https://git.drupalcode.org/project/file_mdm"
         }
     },
     {
         "name": "drupal/file_mdm_exif",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "require": {
-            "drupal/core": "~8.0",
+            "drupal/core": "^8.8 || ^9",
             "drupal/file_mdm": "self.version"
-        },
-        "require-dev": {
-            "drupal/image_effects": "*"
         },
         "type": "metapackage",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1488273785",
+                "version": "8.x-2.1",
+                "datestamp": "1586801064",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3484,28 +3475,22 @@
         "description": "Provides a file metadata plugin for EXIF image information.",
         "homepage": "https://www.drupal.org/project/file_mdm",
         "support": {
-            "source": "http://cgit.drupalcode.org/file_mdm"
+            "source": "https://git.drupalcode.org/project/file_mdm"
         }
     },
     {
         "name": "drupal/file_mdm_font",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "require": {
-            "drupal/core": "~8.0",
+            "drupal/core": "^8.8 || ^9",
             "drupal/file_mdm": "self.version"
-        },
-        "require-dev": {
-            "drupal/image_effects": "*"
         },
         "type": "metapackage",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.1",
-                "datestamp": "1488273785",
+                "version": "8.x-2.1",
+                "datestamp": "1586801064",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3525,7 +3510,7 @@
         "description": "Provides a file metadata plugin for TTF/OTF/WOFF font information.",
         "homepage": "https://www.drupal.org/project/file_mdm",
         "support": {
-            "source": "http://cgit.drupalcode.org/file_mdm"
+            "source": "https://git.drupalcode.org/project/file_mdm"
         }
     },
     {
@@ -3593,39 +3578,36 @@
     },
     {
         "name": "drupal/image_effects",
-        "version": "2.3.0",
-        "version_normalized": "2.3.0.0",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/image_effects.git",
-            "reference": "8.x-2.3"
+            "reference": "8.x-3.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-2.3.zip",
-            "reference": "8.x-2.3",
-            "shasum": "59d1adbfc722b0e0f447d1aedda7cf95e2701425"
+            "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-3.0.zip",
+            "reference": "8.x-3.0",
+            "shasum": "583487575a28c4300917605de742bcf3af82a711"
         },
         "require": {
-            "drupal/core": ">=8.2.0",
-            "drupal/file_mdm_exif": "^1",
-            "drupal/file_mdm_font": "^1"
+            "drupal/core": "^8.8 || ^9",
+            "drupal/file_mdm_exif": "^2",
+            "drupal/file_mdm_font": "^2",
+            "php": ">=7.1"
         },
         "conflict": {
-            "drupal/imagemagick": "<2.3"
+            "drupal/imagemagick": "<3"
         },
         "require-dev": {
-            "drupal/imagemagick": "*",
-            "drupal/jquery_colorpicker": "*"
+            "drupal/imagemagick": "^3"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
             "drupal": {
-                "version": "8.x-2.3",
-                "datestamp": "1547928180",
+                "version": "8.x-3.0",
+                "datestamp": "1581702907",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3650,7 +3632,96 @@
         "description": "Provides effects and operations for the Image API.",
         "homepage": "https://www.drupal.org/project/image_effects",
         "support": {
-            "source": "http://cgit.drupalcode.org/image_effects"
+            "source": "https://git.drupalcode.org/project/image_effects"
+        }
+    },
+    {
+        "name": "drupal/imagemagick",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/imagemagick.git",
+            "reference": "8.x-3.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/imagemagick-8.x-3.1.zip",
+            "reference": "8.x-3.1",
+            "shasum": "f427b06312325aa667c549fed261f73f29e231e7"
+        },
+        "require": {
+            "drupal/core": "^8.8 || ^9",
+            "drupal/file_mdm": "^2",
+            "drupal/sophron": "^1",
+            "php": ">=7"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-3.1",
+                "datestamp": "1581420882",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Chris Charlton",
+                "homepage": "https://www.drupal.org/user/17089"
+            },
+            {
+                "name": "chx",
+                "homepage": "https://www.drupal.org/user/9446"
+            },
+            {
+                "name": "claudiu.cristea",
+                "homepage": "https://www.drupal.org/user/56348"
+            },
+            {
+                "name": "dman",
+                "homepage": "https://www.drupal.org/user/33240"
+            },
+            {
+                "name": "dopry",
+                "homepage": "https://www.drupal.org/user/22202"
+            },
+            {
+                "name": "drewish",
+                "homepage": "https://www.drupal.org/user/34869"
+            },
+            {
+                "name": "gdl",
+                "homepage": "https://www.drupal.org/user/507326"
+            },
+            {
+                "name": "mondrake",
+                "homepage": "https://www.drupal.org/user/1307444"
+            },
+            {
+                "name": "quicksketch",
+                "homepage": "https://www.drupal.org/user/35821"
+            },
+            {
+                "name": "sun",
+                "homepage": "https://www.drupal.org/user/54136"
+            },
+            {
+                "name": "walkah",
+                "homepage": "https://www.drupal.org/user/1531"
+            }
+        ],
+        "description": "Provides an image toolkit to integrate ImageMagick with the Image API.",
+        "homepage": "https://www.drupal.org/project/imagemagick",
+        "support": {
+            "source": "https://git.drupalcode.org/project/imagemagick"
         }
     },
     {
@@ -3804,6 +3875,58 @@
             "source": "https://cgit.drupalcode.org/pathauto",
             "issues": "https://www.drupal.org/project/issues/pathauto",
             "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+        }
+    },
+    {
+        "name": "drupal/sophron",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/sophron.git",
+            "reference": "8.x-1.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/sophron-8.x-1.0.zip",
+            "reference": "8.x-1.0",
+            "shasum": "8cbfd6df04c2ae47ca4a8c35644644bbf54dd25b"
+        },
+        "require": {
+            "drupal/core": "^8.4 || ^9",
+            "fileeye/mimemap": "^1.1.3"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.0",
+                "datestamp": "1576526880",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Drupal\\sophron\\": "src/"
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "mondrake",
+                "homepage": "https://www.drupal.org/user/1307444"
+            }
+        ],
+        "description": "Provides an extensive MIME types management API",
+        "homepage": "https://www.drupal.org/project/sophron",
+        "support": {
+            "source": "https://git.drupalcode.org/project/sophron"
         }
     },
     {
@@ -4207,6 +4330,63 @@
         "homepage": "https://github.com/FriendsOfPHP/Goutte",
         "keywords": [
             "scraper"
+        ]
+    },
+    {
+        "name": "fileeye/mimemap",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FileEye/MimeMap.git",
+            "reference": "3a0ddb71f06d8fb3f84f0a3c45348af81803b16d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/3a0ddb71f06d8fb3f84f0a3c45348af81803b16d",
+            "reference": "3a0ddb71f06d8fb3f84f0a3c45348af81803b16d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "<10",
+            "sebastian/comparator": "*",
+            "sebastian/diff": "*",
+            "squizlabs/php_codesniffer": "*",
+            "symfony/console": "*",
+            "symfony/filesystem": "*",
+            "symfony/var-dumper": "*",
+            "symfony/yaml": "*"
+        },
+        "time": "2020-05-16T10:19:16+00:00",
+        "bin": [
+            "bin/fileeye-mimemap"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FileEye\\MimeMap\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "description": "A PHP library to handle MIME Content-Type fields and their related file extensions.",
+        "homepage": "https://github.com/FileEye/MimeMap",
+        "keywords": [
+            "mime",
+            "mime-database",
+            "mime-parser",
+            "mime-type"
         ]
     },
     {
@@ -5012,29 +5192,29 @@
     },
     {
         "name": "lsolesen/pel",
-        "version": "0.9.6",
-        "version_normalized": "0.9.6.0",
+        "version": "0.9.8",
+        "version_normalized": "0.9.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/lsolesen/pel.git",
-            "reference": "c9e3919f5db3b85c3c422d4f8d448dbcb2a87a23"
+            "url": "https://github.com/pel/pel.git",
+            "reference": "92da891eaeeabbb00bcd09e0cea53796cf9ca967"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/lsolesen/pel/zipball/c9e3919f5db3b85c3c422d4f8d448dbcb2a87a23",
-            "reference": "c9e3919f5db3b85c3c422d4f8d448dbcb2a87a23",
+            "url": "https://api.github.com/repos/pel/pel/zipball/92da891eaeeabbb00bcd09e0cea53796cf9ca967",
+            "reference": "92da891eaeeabbb00bcd09e0cea53796cf9ca967",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.0.0"
+            "php": ">=5.4.0"
         },
         "require-dev": {
             "ext-gd": "*",
-            "phpunit/phpunit": "5.7.*",
+            "phpunit/phpunit": ">=4.8.36 <8",
             "satooshi/php-coveralls": "1.0.*",
-            "squizlabs/php_codesniffer": "3.0.0RC3"
+            "squizlabs/php_codesniffer": "^3.0.0"
         },
-        "time": "2017-02-03T11:58:58+00:00",
+        "time": "2020-02-11T12:05:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -5061,7 +5241,7 @@
             }
         ],
         "description": "PHP Exif Library. A library for reading and writing Exif headers in JPEG and TIFF images using PHP.",
-        "homepage": "http://lsolesen.github.com/pel/",
+        "homepage": "http://pel.github.com/pel/",
         "keywords": [
             "exif",
             "image"
@@ -5507,23 +5687,23 @@
     },
     {
         "name": "phenx/php-font-lib",
-        "version": "0.5",
-        "version_normalized": "0.5.0.0",
+        "version": "0.5.2",
+        "version_normalized": "0.5.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PhenX/php-font-lib.git",
-            "reference": "19ad2bebc35be028fcc0221025fcbf3d436a3962"
+            "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/19ad2bebc35be028fcc0221025fcbf3d436a3962",
-            "reference": "19ad2bebc35be028fcc0221025fcbf3d436a3962",
+            "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/ca6ad461f032145fff5971b5985e5af9e7fa88d8",
+            "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8",
             "shasum": ""
         },
         "require-dev": {
-            "phpunit/phpunit": "^4.8"
+            "phpunit/phpunit": "^4.8.35 || ^5 || ^6 || ^7"
         },
-        "time": "2017-02-11T10:58:43+00:00",
+        "time": "2020-03-08T15:31:32+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

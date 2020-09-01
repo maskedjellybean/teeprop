@@ -154,6 +154,7 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         'F' => 
         array (
             'FontLib\\' => 8,
+            'FileEye\\MimeMap\\' => 16,
         ),
         'E' => 
         array (
@@ -163,6 +164,7 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         array (
             'Drush\\Internal\\' => 15,
             'Drush\\' => 6,
+            'Drupal\\sophron\\' => 15,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
             'Drupal\\Console\\Core\\' => 20,
@@ -473,6 +475,10 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
+        'FileEye\\MimeMap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fileeye/mimemap/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -484,6 +490,10 @@ class ComposerStaticInit494f57a1170a2c602f1668bbc39c6c66
         'Drush\\' => 
         array (
             0 => __DIR__ . '/..' . '/drush/drush/src',
+        ),
+        'Drupal\\sophron\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/web/modules/contrib/sophron/src',
         ),
         'Drupal\\Driver\\' => 
         array (
